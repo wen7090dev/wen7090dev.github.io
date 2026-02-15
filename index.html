@@ -5,6 +5,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>wen7090 | Automation & Productivity Tools</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <meta name="description"
+        content="Portfolio of wen7090dev, specializing in high-performance browser automation and privacy tools. Creator of SwiftPurge for TikTok.">
+    <meta name="keywords"
+        content="TikTok automation, browser extensions, SwiftPurge, privacy tools, web automation, wen7090dev">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://wen7090dev.github.io/">
+    <meta property="og:title" content="wen7090 | Automation & Productivity Tools">
+    <meta property="og:description"
+        content="I build lightweight, high-performance automation extensions that save you hours of manual work.">
+    <meta property="og:image" content="https://wen7090dev.github.io/og-image.jpg">
+    <!-- Ensure to upload an OG image! -->
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="wen7090 | Automation & Productivity Tools">
+    <meta property="twitter:description"
+        content="I build lightweight, high-performance automation extensions that save you hours of manual work.">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
@@ -104,7 +125,6 @@
             padding: 40px;
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             position: relative;
-            overflow: hidden;
             display: flex;
             flex-direction: column;
         }
@@ -114,6 +134,7 @@
             border-color: rgba(254, 44, 85, 0.4);
             background: rgba(255, 255, 255, 0.05);
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+            z-index: 100;
         }
 
         .card-icon {
@@ -214,9 +235,176 @@
             font-size: 0.9rem;
         }
 
+        /* Navigation Dropdown */
+        .nav-container {
+            position: fixed;
+            top: 20px;
+            right: 40px;
+            z-index: 1000;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-trigger {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            padding: 10px 20px;
+            border-radius: 12px;
+            color: var(--text);
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            backdrop-filter: blur(10px);
+        }
+
+        .dropdown:hover .dropdown-trigger {
+            border-color: var(--primary);
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .dropdown-content {
+            position: absolute;
+            right: 0;
+            top: calc(100% + 10px);
+            background: #121216;
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            min-width: 200px;
+            padding: 8px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(20px);
+        }
+
+        .dropdown:hover .dropdown-content {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-content a {
+            color: var(--text-dim);
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            font-size: 14px;
+            border-radius: 8px;
+            transition: all 0.2s;
+        }
+
+        .dropdown-content a:hover {
+            background: rgba(254, 44, 85, 0.1);
+            color: var(--primary);
+        }
+
+        .dropdown-content a:hover {
+            background: rgba(254, 44, 85, 0.1);
+            color: var(--primary);
+        }
+
+        /* Card Level Dropdown */
+        .card .dropdown {
+            width: 100%;
+            margin-top: auto;
+        }
+
+        .card .dropdown-trigger {
+            width: 100%;
+            justify-content: center;
+            background: var(--primary);
+            color: white;
+            padding: 14px;
+            border-radius: 14px;
+            border: none;
+            box-shadow: 0 8px 20px rgba(254, 44, 85, 0.3);
+        }
+
+        .card .dropdown-trigger:hover {
+            transform: scale(1.02);
+            box-shadow: 0 12px 28px rgba(254, 44, 85, 0.5);
+            background: var(--primary);
+            border: none;
+        }
+
+        .card .dropdown-content {
+            width: 100%;
+            top: calc(100% + 10px);
+            bottom: auto;
+            transform: translateY(10px);
+        }
+
+        .card .dropdown:hover .dropdown-content {
+            transform: translateY(0);
+        }
+
+        .browser-icon {
+            width: 18px;
+            height: 18px;
+            margin-right: 10px;
+        }
+
+        .browser-icon {
+            width: 18px;
+            height: 18px;
+            margin-right: 10px;
+        }
+
+        /* Tech Badges */
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 24px;
+        }
+
+        .tech-badge {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border);
+            padding: 4px 10px;
+            border-radius: 8px;
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--text-dim);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .stats-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 4px 12px;
+            background: rgba(0, 242, 234, 0.1);
+            border: 1px solid rgba(0, 242, 234, 0.2);
+            color: var(--success);
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .card:hover .stats-badge {
+            background: rgba(0, 242, 234, 0.2);
+        }
+
         @media (max-width: 768px) {
             h1 {
                 font-size: 2.5rem;
+            }
+
+            .nav-container {
+                right: 20px;
+                top: 15px;
             }
 
             .grid {
@@ -244,11 +432,63 @@
         <div class="grid">
             <!-- SWIFT PURGE -->
             <div class="card">
-                <div class="card-icon">⚡</div>
+                <div class="stats-badge"
+                    style="background: rgba(254, 44, 85, 0.1); border-color: rgba(254, 44, 85, 0.2); color: var(--primary);">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path
+                            d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                    </svg>
+                    <span>NEW RELEASE</span>
+                </div>
+                <div class="card-icon" style="background: none;">
+                    <img src="swiftpurge.svg" alt="SwiftPurge Logo"
+                        style="width: 48px; height: 48px; filter: drop-shadow(0 0 10px rgba(238, 29, 82, 0.3));">
+                </div>
                 <h2>SwiftPurge</h2>
+                <div class="tech-stack">
+                    <span class="tech-badge">Javascript</span>
+                    <span class="tech-badge">WebExtensions API</span>
+                    <span class="tech-badge">DOM Manipulation</span>
+                </div>
                 <p>The ultimate privacy tool for TikTok. Automatically clean your likes, reposts, and favorites with
                     smart human-mimicking algorithms.</p>
-                <a href="#" class="btn btn-primary">Coming to Web Store</a>
+                <a href="privacy-policy/SwiftPurge.html"
+                    style="color: var(--primary); text-decoration: none; font-size: 0.8rem; margin-bottom: 20px; display: inline-block; font-weight: 600;">View
+                    Privacy Policy</a>
+
+                <div class="dropdown">
+                    <div class="dropdown-trigger">
+                        <span>Get SwiftPurge</span>
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 8px;">
+                            <path d="m6 9 6 6 6-6" />
+                        </svg>
+                    </div>
+                    <div class="dropdown-content">
+                        <a href="https://chromewebstore.google.com/detail/swiftpurge-tiktok-repost/dbdapoekdehhgaabhpnefhldmcniaicf"
+                            target="_blank" style="display: flex; align-items: center;">
+                            <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png"
+                                class="browser-icon" alt="">
+                            Chrome
+                        </a>
+                        <a href="https://addons.mozilla.org/fr/firefox/addon/swiftpurge-tiktok-cleaner/" target="_blank"
+                            style="display: flex; align-items: center;">
+                            <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png"
+                                class="browser-icon" alt="">
+                            Firefox
+                        </a>
+                        <a href="https://microsoftedge.microsoft.com/addons" target="_blank"
+                            style="display: flex; align-items: center;">
+                            <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png"
+                                class="browser-icon" alt="">
+                            Edge (Coming)
+                        </a>
+                    </div>
+                </div>
+                <p style="font-size: 10px; opacity: 0.4; margin-top: 15px; text-align: center; font-style: italic;">
+                    Not affiliated with TikTok.
+                </p>
             </div>
 
             <!-- FUTURE APP PLACEHOLDER 1 
@@ -278,14 +518,15 @@
             <h2>Support my work</h2>
             <p>I focus on creating free or affordable tools for everyone. If any of my projects saved you time or made
                 your life easier, consider fueling the next one with a coffee!</p>
-            <a href="https://www.buymeacoffee.com/wen7090dev" target="_blank" class="btn btn-support">
-                <img src="https://cdn.buymeacoffee.com/buttons/bcc-button.png" alt="Buy Me a Coffee"
-                    style="height: 40px !important;width: 174px !important;">
+            <a href="https://www.buymeacoffee.com/wen7090dev" target="_blank" class="btn btn-support"
+                style="padding: 0; overflow: hidden; height: 50px; background: #FFDD00;">
+                <img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=wen7090dev&button_colour=FFDD00&font_colour=000000&font_family=Inter&outline_colour=000000&coffee_colour=ffffff"
+                    alt="Buy Me a Coffee" style="height: 100%; width: auto;">
             </a>
         </div>
 
         <footer>
-            &copy; 2026 wen7090dev Studio &bull; All tools built with precision and care.
+            <p>&copy; 2026 wen7090dev &bull; All tools built with precision and care.</p>
         </footer>
     </div>
 </body>
