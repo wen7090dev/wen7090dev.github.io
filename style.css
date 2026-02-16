@@ -17,7 +17,20 @@ html {
 /* Custom Selection Color */
 ::selection {
     background: var(--primary);
-    color: #fff;
+    color: #ffffff;
+    -webkit-text-fill-color: #ffffff;
+}
+
+::-moz-selection {
+    background: var(--primary);
+    color: #ffffff;
+}
+
+/* Force text visibility on selection for gradient text */
+h1::selection,
+h2::selection,
+h3::selection {
+    -webkit-text-fill-color: #ffffff;
 }
 
 /* Custom Scrollbar */
