@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#fe2c55">
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://raw.githubusercontent.com https://img.buymeacoffee.com https://www.google.com https://thebrowser.company https://icons.duckduckgo.com; connect-src 'self';">
+    <title>License | SwiftPurge</title>
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <script src="../i18n.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <div class="noise"></div>
+    <div class="bg-glow"></div>
+    <nav class="main-nav">
+        <div class="menu-btn" onclick="toggleMenu()" aria-label="Toggle Navigation Menu">
+            <div class="hamburger"></div>
+        </div>
+        <div class="nav-container-new" id="mobileMenu">
+            <a href="../index.html" data-i18n="nav_projects">Projects</a>
+            <a href="../contact.html" data-i18n="nav_contact">Contact</a>
+            <div class="lang-selector">
+                <span onclick="setLanguage('en'); if(window.innerWidth <= 768) toggleMenu()" class="lang-btn"
+                    data-lang="en" aria-label="Switch to English">EN</span>
+                <span onclick="setLanguage('fr'); if(window.innerWidth <= 768) toggleMenu()" class="lang-btn"
+                    data-lang="fr" aria-label="Switch to French">FR</span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <a href="../index.html" class="back-link reveal">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="m15 18-6-6 6-6" />
+            </svg>
+            <span data-i18n="policy_back">Back to Portfolio</span>
+        </a>
+
+        <div class="policy-box reveal">
+            <div class="header-section">
+                <span class="last-updated" data-i18n="license_effective">Effective Date: February 16, 2026</span>
+                <h1 data-i18n="license_title">End-User License Agreement</h1>
+                <p style="margin-bottom: 0;" data-i18n="license_subtitle">Standard License Terms for SwiftPurge.</p>
+                <p style="margin-top: 10px;"><a href="../privacy-policy/swiftpurge.html" data-i18n="view_privacy"
+                        style="color: var(--primary); text-decoration: none; font-size: 0.85rem; font-weight: 600;">View
+                        Privacy Policy</a></p>
+            </div>
+
+            <h2><span>01</span> <span data-i18n="license_section_1">Personal Use Only</span></h2>
+            <p data-i18n="license_p_1">This software is provided for personal, non-commercial use only. You may not
+                sell, redistribute, or use this tool for commercial automation services without prior written consent.
+            </p>
+
+            <h2><span>02</span> <span data-i18n="license_section_2">Restrictions</span></h2>
+            <p data-i18n="license_p_2">You agree not to attempt to reverse engineer, decompile, or modify the core
+                functionality of the extension to bypass security measures or subscription checks.</p>
+
+            <h2><span>03</span> <span data-i18n="license_section_3">Liability</span></h2>
+            <p data-i18n="license_p_3">The software is provided 'as is'. The developer is not responsible for any
+                misuse, account suspensions, or data loss resulting from the use of this software on the TikTok
+                platform.</p>
+
+            <h2><span>04</span> <span data-i18n="policy_section_7">Legal Disclaimer</span></h2>
+            <p data-i18n="policy_p_7_1">SwiftPurge is an independent tool and is <strong>not affiliated, associated,
+                    authorized, endorsed by, or in any way officially connected with TikTok</strong>, ByteDance Ltd, or
+                any of its subsidiaries or its affiliates.</p>
+
+            <h2><span>05</span> <span data-i18n="policy_section_8">Contact</span></h2>
+            <p data-i18n="policy_p_8"></p>
+        </div>
+    </div>
+
+    <footer class="reveal">
+        <p>&copy; 2026 SwiftPurge • <span data-i18n="footer_text">Transparent Automation Studio.</span></p>
+        <p style="font-size: 0.75rem; margin-top: 10px; opacity: 0.6;">
+            <span data-i18n="site_privacy_notice">No cookies • No data collection • 100% Privacy</span>
+            <br>
+            <span data-i18n="site_legal">Legal Notice</span>: Hosted by GitHub Inc.
+        </p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById('mobileMenu').classList.toggle('active');
+            document.querySelector('.menu-btn').classList.toggle('active');
+        }
+
+        const observerOptions = { threshold: 0.1 };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+
+</html>

@@ -8,10 +8,15 @@ const PORTFOLIO_TRANSLATIONS = {
         get_swiftpurge: "Get SwiftPurge",
         coming_soon: "(Coming)",
         footer_text: "All tools built with precision and care.",
+        site_legal: "Legal Notice",
+        site_privacy_notice: "No cookies • No data collection • 100% Privacy",
         active_users: "Active Users",
         new_release: "NEW RELEASE",
+        support_title: "Support my work",
+        support_desc: "I focus on creating free or affordable tools for everyone. If any of my projects saved you time or made your life easier, consider fueling the next one with a coffee!",
         contact_title: "Get in Touch",
         contact_subtitle: "No complicated forms. Contact me directly on your favorite platform.",
+        contact_github: "GitHub",
         contact_info_h2: "Contact Information",
         contact_info_p: "Feel free to reach out for support, business inquiries, or just to say hi. I'll get back to you as soon as possible.",
         form_name: "Name",
@@ -27,6 +32,7 @@ const PORTFOLIO_TRANSLATIONS = {
         contact_fuel: "Fuel the work",
         contact_support: "Support",
         contact_coffee: "Buy me a coffee",
+        current_browser: "Current",
         // Privacy Policy
         policy_back: "Back to Portfolio",
         policy_title: "Privacy Policy",
@@ -51,7 +57,20 @@ const PORTFOLIO_TRANSLATIONS = {
         policy_p_7_1: "SwiftPurge is an independent tool and is not affiliated with TikTok.",
         policy_p_7_2: "The use of this extension is at your own risk.",
         policy_section_8: "Contact",
-        policy_p_8: "SwiftPurge is developed by <strong>wen7090dev</strong>."
+        policy_p_8: "SwiftPurge is developed by <strong>wen7090dev</strong>. For any questions regarding this policy, you can contact me at <a href='mailto:wen7090dev@gmail.com' style='color: var(--primary); text-decoration: none;'>wen7090dev@gmail.com</a> or visit my portfolio at <a href='https://wen7090dev.github.io/' style='color: var(--primary); text-decoration: none;'>wen7090dev.github.io</a>.",
+        // License
+        view_license: "View License",
+        license_title: "End-User License Agreement",
+        license_effective: "Last Updated: February 16, 2026",
+        license_subtitle: "Standard License Terms for SwiftPurge.",
+        license_section_1: "Personal Use Only",
+        license_p_1: "This software is provided for personal, non-commercial use only. You may not sell, redistribute, or use this tool for commercial automation services without prior written consent.",
+        license_section_2: "Restrictions",
+        license_p_2: "You agree not to attempt to reverse engineer, decompile, or modify the core functionality of the extension to bypass security measures or subscription checks.",
+        license_section_3: "Liability",
+        license_p_3: "The software is provided 'as is'. The developer is not responsible for any misuse, account suspensions, or data loss resulting from the use of this software on the TikTok platform.",
+        extension_version: "1.0.0",
+        error_404_msg: "You've reached a ghost page."
     },
     fr: {
         nav_projects: "Projets",
@@ -62,10 +81,15 @@ const PORTFOLIO_TRANSLATIONS = {
         get_swiftpurge: "Obtenir SwiftPurge",
         coming_soon: "(Bientôt)",
         footer_text: "Tous les outils sont conçus avec précision et soin.",
+        site_legal: "Mentions Légales",
+        site_privacy_notice: "Aucun cookie • Aucune collecte de données • 100% Privé",
         active_users: "Utilisateurs Actifs",
         new_release: "NOUVEAUTÉ",
+        support_title: "Soutenir mon travail",
+        support_desc: "Je me concentre sur la création d'outils gratuits ou abordables pour tous. Si l'un de mes projets vous a fait gagner du temps, n'hésitez pas à soutenir le prochain avec un café !",
         contact_title: "Me Contacter",
         contact_subtitle: "Pas de formulaires compliqués. Contactez-moi directement sur votre plateforme préférée.",
+        contact_github: "GitHub",
         contact_info_h2: "Informations de Contact",
         contact_info_p: "N'hésitez pas à me contacter pour du support, des demandes commerciales ou simplement pour dire bonjour. Je vous répondrai dès que possible.",
         form_name: "Nom",
@@ -81,6 +105,7 @@ const PORTFOLIO_TRANSLATIONS = {
         contact_fuel: "Soutenir mes projets",
         contact_support: "Support",
         contact_coffee: "Offrez-moi un café",
+        current_browser: "Actuel",
         // Privacy Policy
         policy_back: "Retour au Portfolio",
         policy_title: "Politique de Confidentialité",
@@ -105,7 +130,20 @@ const PORTFOLIO_TRANSLATIONS = {
         policy_p_7_1: "SwiftPurge est un outil indépendant et n'est pas affilié à TikTok.",
         policy_p_7_2: "L'utilisation de cette extension est à vos propres risques.",
         policy_section_8: "Contact",
-        policy_p_8: "SwiftPurge est développé par <strong>wen7090dev</strong>."
+        policy_p_8: "SwiftPurge est développé par <strong>wen7090dev</strong>. Pour toute question concernant cette politique, vous pouvez me contacter à <a href='mailto:wen7090dev@gmail.com' style='color: var(--primary); text-decoration: none;'>wen7090dev@gmail.com</a> ou visiter mon portfolio sur <a href='https://wen7090dev.github.io/' style='color: var(--primary); text-decoration: none;'>wen7090dev.github.io</a>.",
+        // License
+        view_license: "Voir la Licence",
+        license_title: "Contrat de Licence Utilisateur Final",
+        license_effective: "Dernière mise à jour : 16 Février 2026",
+        license_subtitle: "Conditions de licence standard pour SwiftPurge.",
+        license_section_1: "Usage Personnel Uniquement",
+        license_p_1: "Ce logiciel est fourni pour un usage personnel et non commercial uniquement. Vous ne pouvez pas vendre, redistribuer ou utiliser cet outil pour des services d'automatisation commerciale sans consentement écrit préalable.",
+        license_section_2: "Restrictions",
+        license_p_2: "Vous acceptez de ne pas tenter de faire de l'ingénierie inverse, de décompiler ou de modifier les fonctionnalités de base de l'extension pour contourner les mesures de sécurité ou les vérifications d'abonnement.",
+        license_section_3: "Responsabilité",
+        license_p_3: "Le logiciel est fourni 'en l'état'. Le développeur n'est pas responsable de toute mauvaise utilisation, suspension de compte ou perte de données résultant de l'utilisation de ce logiciel sur la plateforme TikTok.",
+        extension_version: "1.0.0",
+        error_404_msg: "Vous êtes arrivé sur une page fantôme."
     }
 };
 
