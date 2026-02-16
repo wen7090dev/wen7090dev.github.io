@@ -1,6 +1,7 @@
 /* Global Design Tokens */
 :root {
-    --primary: #fe2c55;
+    --primary: #e62a50;
+    /* Darkened slightly for better WCAG contrast */
     --accent: #FFDD00;
     --bg: #0a0a0c;
     --card-bg: rgba(255, 255, 255, 0.03);
@@ -215,7 +216,8 @@ h1 {
 .lang-btn.active {
     opacity: 1;
     background: var(--primary);
-    box-shadow: 0 4px 12px rgba(254, 44, 85, 0.4);
+    transform: scale(1.05);
+    /* Use scale instead of box-shadow for performance */
 }
 
 /* Animations (Reveal) */
