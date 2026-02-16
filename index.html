@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>wen7090 | Automation & Productivity Tools</title>
+    <title>wen7090dev | Automation & Productivity Tools</title>
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <script src="i18n.js"></script>
     <meta name="description"
         content="Portfolio of wen7090dev, specializing in high-performance browser automation and privacy tools. Creator of SwiftPurge for TikTok.">
     <meta name="keywords"
@@ -14,15 +15,15 @@
     <!-- Open Graph / Social Media -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://wen7090dev.github.io/">
-    <meta property="og:title" content="wen7090 | Automation & Productivity Tools">
+    <meta property="og:title" content="wen7090dev | Automation & Productivity Tools">
     <meta property="og:description"
         content="I build lightweight, high-performance automation extensions that save you hours of manual work.">
-    <meta property="og:image" content="https://wen7090dev.github.io/og-image.jpg">
-    <!-- Ensure to upload an OG image! -->
+    <meta property="og:image" content="https://wen7090dev.github.io/favicon.svg">
+    <meta property="twitter:image" content="https://wen7090dev.github.io/favicon.svg">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:title" content="wen7090 | Automation & Productivity Tools">
+    <meta property="twitter:title" content="wen7090dev | Automation & Productivity Tools">
     <meta property="twitter:description"
         content="I build lightweight, high-performance automation extensions that save you hours of manual work.">
 
@@ -236,11 +237,196 @@
         }
 
         /* Navigation Dropdown */
-        .nav-container {
-            position: fixed;
-            top: 20px;
+        /* Menu Bar Styling */
+        .main-nav {
+            position: absolute;
+            top: 40px;
+            left: 0;
             right: 40px;
-            z-index: 1000;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            z-index: 2000;
+        }
+
+        .nav-container-new {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.03);
+            padding: 6px;
+            padding-left: 20px;
+            border-radius: 100px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(20px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .nav-container-new:hover {
+            border-color: rgba(254, 44, 85, 0.3);
+            background: rgba(255, 255, 255, 0.05);
+            transform: translateY(-2px);
+            box-shadow: 0 15px 35px rgba(254, 44, 85, 0.1);
+        }
+
+        .nav-container-new a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 10px 18px;
+            border-radius: 100px;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            opacity: 0.7;
+        }
+
+        .nav-container-new a:hover {
+            opacity: 1;
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--primary);
+        }
+
+        .nav-container-new a.active {
+            opacity: 1;
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .lang-selector {
+            display: flex;
+            gap: 4px;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 4px;
+            border-radius: 100px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .lang-btn {
+            cursor: pointer;
+            font-size: 11px;
+            font-weight: 800;
+            width: 34px;
+            height: 34px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+            opacity: 0.4;
+            color: white;
+        }
+
+        .lang-btn.active {
+            opacity: 1;
+            background: var(--primary);
+            box-shadow: 0 4px 12px rgba(254, 44, 85, 0.4);
+        }
+
+        /* Mobile Menu Button */
+        .menu-btn {
+            display: none;
+            width: 44px;
+            height: 44px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            z-index: 2001;
+            transition: all 0.3s ease;
+        }
+
+        .menu-btn:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: scale(1.05);
+            border-color: var(--primary);
+        }
+
+        .menu-btn .hamburger {
+            width: 20px;
+            height: 2px;
+            background: white;
+            position: relative;
+            transition: 0.3s;
+        }
+
+        .menu-btn .hamburger::before,
+        .menu-btn .hamburger::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background: white;
+            transition: 0.3s;
+        }
+
+        .menu-btn .hamburger::before {
+            top: -6px;
+        }
+
+        .menu-btn .hamburger::after {
+            top: 6px;
+        }
+
+        .menu-btn.active .hamburger {
+            background: transparent;
+        }
+
+        .menu-btn.active .hamburger::before {
+            top: 0;
+            transform: rotate(45deg);
+        }
+
+        .menu-btn.active .hamburger::after {
+            top: 0;
+            transform: rotate(-45deg);
+        }
+
+        @media (max-width: 768px) {
+            .menu-btn {
+                display: flex;
+            }
+
+            .nav-container-new {
+                position: fixed;
+                top: 0;
+                right: 0;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                height: 100vh;
+                background: rgba(10, 10, 12, 0.98);
+                flex-direction: column;
+                justify-content: center;
+                gap: 40px;
+                padding: 0;
+                border-radius: 0;
+                border: none;
+                backdrop-filter: blur(20px);
+                opacity: 0;
+                visibility: hidden;
+                pointer-events: none;
+                transform: scale(1.1);
+                transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+            }
+
+            .nav-container-new.active {
+                opacity: 1;
+                visibility: visible;
+                pointer-events: all;
+                transform: scale(1);
+            }
+
+            .nav-container-new a {
+                font-size: 2rem;
+                font-weight: 800;
+                letter-spacing: -1px;
+            }
+
+            .lang-selector {
+                margin-top: 20px;
+            }
         }
 
         .dropdown {
@@ -257,7 +443,7 @@
             font-weight: 600;
             font-size: 14px;
             cursor: pointer;
-            transition: all 0.3s;
+            wen7090dev@gmail.com transition: all 0.3s;
             display: flex;
             align-items: center;
             gap: 8px;
@@ -312,7 +498,7 @@
             color: var(--primary);
         }
 
-        /* Card Level Dropdown */
+        /* Card Level Dropdown (Expanded) */
         .card .dropdown {
             width: 100%;
             margin-top: auto;
@@ -327,24 +513,38 @@
             border-radius: 14px;
             border: none;
             box-shadow: 0 8px 20px rgba(254, 44, 85, 0.3);
-        }
-
-        .card .dropdown-trigger:hover {
-            transform: scale(1.02);
-            box-shadow: 0 12px 28px rgba(254, 44, 85, 0.5);
-            background: var(--primary);
-            border: none;
+            position: relative;
+            z-index: 2;
         }
 
         .card .dropdown-content {
+            position: relative;
             width: 100%;
-            top: calc(100% + 10px);
-            bottom: auto;
-            transform: translateY(10px);
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border);
+            border-top: none;
+            border-radius: 0 0 16px 16px;
+            margin-top: -10px;
+            padding-top: 15px;
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+            visibility: hidden;
+            transform: none;
+            box-shadow: none;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 1;
         }
 
-        .card .dropdown:hover .dropdown-content {
-            transform: translateY(0);
+        .card .dropdown.active .dropdown-content {
+            max-height: 400px;
+            opacity: 1;
+            visibility: visible;
+            padding-bottom: 10px;
+            margin-top: -10px;
         }
 
         .browser-icon {
@@ -421,11 +621,28 @@
 <body>
     <div class="bg-glow"></div>
 
+    <nav class="main-nav">
+        <div class="menu-btn" onclick="toggleMenu()">
+            <div class="hamburger"></div>
+        </div>
+        <div class="nav-container-new" id="mobileMenu">
+            <a href="index.html" class="active" data-i18n="nav_projects">Projects</a>
+            <a href="contact.html" data-i18n="nav_contact">Contact</a>
+            <div class="lang-selector">
+                <span onclick="setLanguage('en'); if(window.innerWidth <= 768) toggleMenu()" class="lang-btn"
+                    data-lang="en">EN</span>
+                <span onclick="setLanguage('fr'); if(window.innerWidth <= 768) toggleMenu()" class="lang-btn"
+                    data-lang="fr">FR</span>
+            </div>
+        </div>
+    </nav>
+
     <div class="container">
         <header>
             <div class="profile-badge">wen7090dev</div>
             <h1>wen7090dev</h1>
-            <p class="tagline">I build lightweight, high-performance automation extensions that save you hours of manual
+            <p class="tagline" data-i18n="tagline">I build lightweight, high-performance automation extensions that save
+                you hours of manual
                 work.</p>
         </header>
 
@@ -439,7 +656,7 @@
                         <path
                             d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                     </svg>
-                    <span>NEW RELEASE</span>
+                    <span data-i18n="new_release">NEW RELEASE</span>
                 </div>
                 <div class="card-icon" style="background: none;">
                     <img src="swiftpurge.svg" alt="SwiftPurge Logo"
@@ -451,15 +668,16 @@
                     <span class="tech-badge">WebExtensions API</span>
                     <span class="tech-badge">DOM Manipulation</span>
                 </div>
-                <p>The ultimate privacy tool for TikTok. Automatically clean your likes, reposts, and favorites with
+                <p data-i18n="swiftpurge_desc">The ultimate privacy tool for TikTok. Automatically clean your likes,
+                    reposts, and favorites with
                     smart human-mimicking algorithms.</p>
-                <a href="privacy-policy/swiftpurge.html"
+                <a href="privacy-policy/swiftpurge.html" data-i18n="view_privacy"
                     style="color: var(--primary); text-decoration: none; font-size: 0.8rem; margin-bottom: 20px; display: inline-block; font-weight: 600;">View
                     Privacy Policy</a>
 
-                <div class="dropdown">
+                <div class="dropdown" onclick="this.classList.toggle('active')">
                     <div class="dropdown-trigger">
-                        <span>Get SwiftPurge</span>
+                        <span data-i18n="get_swiftpurge">Get SwiftPurge</span>
                         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 8px;">
                             <path d="m6 9 6 6 6-6" />
@@ -477,6 +695,18 @@
                             <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png"
                                 class="browser-icon" alt="">
                             Firefox
+                        </a>
+                        <a href="https://addons.opera.com/extensions" target="_blank"
+                            style="display: flex; align-items: center;">
+                            <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/opera/opera_48x48.png"
+                                class="browser-icon" alt="">
+                            Opera
+                        </a>
+                        <a href="https://chromewebstore.google.com/detail/swiftpurge-tiktok-repost/dbdapoekdehhgaabhpnefhldmcniaicf"
+                            target="_blank" style="display: flex; align-items: center;">
+                            <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/brave/brave_48x48.png"
+                                class="browser-icon" alt="">
+                            Brave
                         </a>
                         <a href="https://microsoftedge.microsoft.com/addons" target="_blank"
                             style="display: flex; align-items: center;">
@@ -526,9 +756,16 @@
         </div>
 
         <footer>
-            <p>&copy; 2026 wen7090dev &bull; All tools built with precision and care.</p>
+            <p>&copy; 2026 wen7090dev &bull; <span data-i18n="footer_text">All tools built with precision and
+                    care.</span></p>
         </footer>
     </div>
+    <script>
+        function toggleMenu() {
+            document.getElementById('mobileMenu').classList.toggle('active');
+            document.querySelector('.menu-btn').classList.toggle('active');
+        }
+    </script>
 </body>
 
 </html>

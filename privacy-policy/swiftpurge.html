@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy | SwiftPurge</title>
     <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <script src="../i18n.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
@@ -18,6 +19,198 @@
             --text: #ffffff;
             --text-dim: #88888e;
             --success: #00f2ea;
+        }
+
+        /* Menu Bar Styling */
+        .main-nav {
+            position: absolute;
+            top: 40px;
+            left: 0;
+            right: 40px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            z-index: 2000;
+        }
+
+        .nav-container-new {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.03);
+            padding: 6px;
+            padding-left: 20px;
+            border-radius: 100px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(20px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .nav-container-new:hover {
+            border-color: rgba(254, 44, 85, 0.3);
+            background: rgba(255, 255, 255, 0.05);
+            transform: translateY(-2px);
+            box-shadow: 0 15px 35px rgba(254, 44, 85, 0.1);
+        }
+
+        .nav-container-new a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 10px 18px;
+            border-radius: 100px;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            opacity: 0.7;
+        }
+
+        .nav-container-new a:hover {
+            opacity: 1;
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--primary);
+        }
+
+        .nav-container-new a.active {
+            opacity: 1;
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .lang-selector {
+            display: flex;
+            gap: 4px;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 4px;
+            border-radius: 100px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .lang-btn {
+            cursor: pointer;
+            font-size: 11px;
+            font-weight: 800;
+            width: 34px;
+            height: 34px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+            opacity: 0.4;
+            color: white;
+        }
+
+        .lang-btn.active {
+            opacity: 1;
+            background: var(--primary);
+            box-shadow: 0 4px 12px rgba(254, 44, 85, 0.4);
+        }
+
+        /* Mobile Menu Button */
+        .menu-btn {
+            display: none;
+            width: 44px;
+            height: 44px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            z-index: 2001;
+            transition: all 0.3s ease;
+        }
+
+        .menu-btn:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: scale(1.05);
+            border-color: var(--primary);
+        }
+
+        .menu-btn .hamburger {
+            width: 20px;
+            height: 2px;
+            background: white;
+            position: relative;
+            transition: 0.3s;
+        }
+
+        .menu-btn .hamburger::before,
+        .menu-btn .hamburger::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background: white;
+            transition: 0.3s;
+        }
+
+        .menu-btn .hamburger::before {
+            top: -6px;
+        }
+
+        .menu-btn .hamburger::after {
+            top: 6px;
+        }
+
+        .menu-btn.active .hamburger {
+            background: transparent;
+        }
+
+        .menu-btn.active .hamburger::before {
+            top: 0;
+            transform: rotate(45deg);
+        }
+
+        .menu-btn.active .hamburger::after {
+            top: 0;
+            transform: rotate(-45deg);
+        }
+
+        @media (max-width: 768px) {
+            .menu-btn {
+                display: flex;
+            }
+
+            .nav-container-new {
+                position: fixed;
+                top: 0;
+                right: 0;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                height: 100vh;
+                background: rgba(10, 10, 12, 0.98);
+                flex-direction: column;
+                justify-content: center;
+                gap: 40px;
+                padding: 0;
+                border-radius: 0;
+                border: none;
+                backdrop-filter: blur(20px);
+                opacity: 0;
+                visibility: hidden;
+                pointer-events: none;
+                transform: scale(1.1);
+                transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+            }
+
+            .nav-container-new.active {
+                opacity: 1;
+                visibility: visible;
+                pointer-events: all;
+                transform: scale(1);
+            }
+
+            .nav-container-new a {
+                font-size: 2rem;
+                font-weight: 800;
+                letter-spacing: -1px;
+            }
+
+            .lang-selector {
+                margin-top: 20px;
+            }
         }
 
         * {
@@ -176,55 +369,81 @@
             body {
                 padding: 40px 16px;
             }
+
+            .main-nav {
+                display: none;
+                /* Mobile menu will handle it */
+            }
         }
     </style>
 </head>
 
 <body>
+    <nav class="main-nav">
+        <div class="menu-btn" onclick="toggleMenu()">
+            <div class="hamburger"></div>
+        </div>
+        <div class="nav-container-new" id="mobileMenu">
+            <a href="../index.html" data-i18n="nav_projects">Projects</a>
+            <a href="../contact.html" data-i18n="nav_contact">Contact</a>
+            <div class="lang-selector">
+                <span onclick="setLanguage('en'); if(window.innerWidth <= 768) toggleMenu()" class="lang-btn"
+                    data-lang="en">EN</span>
+                <span onclick="setLanguage('fr'); if(window.innerWidth <= 768) toggleMenu()" class="lang-btn"
+                    data-lang="fr">FR</span>
+            </div>
+        </div>
+    </nav>
+
     <div class="container">
         <a href="../index.html" class="back-link">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                 stroke-linecap="round" stroke-linejoin="round">
                 <path d="m15 18-6-6 6-6" />
             </svg>
-            Back to Portfolio
+            <span data-i18n="policy_back">Back to Portfolio</span>
         </a>
 
         <div class="policy-box">
             <div class="header-section">
-                <span class="last-updated">Effective Date: February 15, 2026</span>
-                <h1>Privacy Policy</h1>
-                <p style="margin-bottom: 0;">Transparent data management for SwiftPurge.</p>
+                <span class="last-updated" data-i18n="policy_effective">Effective Date: February 15, 2026</span>
+                <h1 data-i18n="policy_title">Privacy Policy</h1>
+                <p style="margin-bottom: 0;" data-i18n="policy_subtitle">Transparent data management for SwiftPurge.</p>
             </div>
 
             <div class="summary-box">
-                <h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
-                        stroke-linecap="round" stroke-linejoin="round">
+                <h3 data-i18n="policy_summary_h3"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" />
                         <path d="m9 12 2 2 4-4" />
                     </svg> Quick Summary</h3>
                 <ul>
-                    <li>No personal data is collected or transmitted externally.</li>
-                    <li>Activity logs are purely local and exist for your reports.</li>
-                    <li>We never access your TikTok password or login credentials.</li>
-                    <li>No ads, no tracking, and no external cookies.</li>
+                    <li data-i18n="policy_summary_1">No personal data is collected or transmitted externally.</li>
+                    <li data-i18n="policy_summary_2">Activity logs are purely local and exist for your reports.</li>
+                    <li data-i18n="policy_summary_3">We never access your TikTok password or login credentials.</li>
+                    <li data-i18n="policy_summary_4">No ads, no tracking, and no external cookies.</li>
                 </ul>
             </div>
 
-            <h2><span>01</span> Local Data Storage</h2>
-            <p>SwiftPurge stores minimal information locally in your browser's <code>chrome.storage.local</code> area.
-                This data is never shared with us:</p>
+            <h2><span>01</span> <span data-i18n="policy_section_1">Local Data Storage</span></h2>
+            <p data-i18n="policy_p_1">SwiftPurge stores minimal information locally in your browser's
+                <code>chrome.storage.local</code> area.
+                This data is never shared with us:
+            </p>
             <ul style="margin-left: 20px; color: var(--text-dim); margin-bottom: 24px;">
-                <li><strong>User Preferences:</strong> Your selected interface language, cleaning speed, and action
+                <li data-i18n="policy_list_1_1"><strong>User Preferences:</strong> Your selected interface language,
+                    cleaning speed, and action
                     limits.</li>
-                <li><strong>Access Token:</strong> A local timestamp that records when the Advanced Mode was unlocked
+                <li data-i18n="policy_list_1_2"><strong>Access Token:</strong> A local timestamp that records when the
+                    Advanced Mode was unlocked
                     via the support button.</li>
-                <li><strong>Action History:</strong> A list of cleaning tasks performed (Action type, Video Author, and
+                <li data-i18n="policy_list_1_3"><strong>Action History:</strong> A list of cleaning tasks performed
+                    (Action type, Video Author, and
                     Video URL) used to generate your downloadable reports.</li>
             </ul>
 
-            <h2><span>02</span> Permissions Breakdown</h2>
-            <p>To automate tasks on TikTok, the extension requires the following permissions:</p>
+            <h2><span>02</span> <span data-i18n="policy_section_2">Permissions Breakdown</span></h2>
+            <p data-i18n="policy_p_2">To automate tasks on TikTok, the extension requires the following permissions:</p>
 
             <div class="permission-card">
                 <strong>Storage API</strong>
@@ -244,41 +463,39 @@
                     cleaning actions as requested by you.</p>
             </div>
 
-            <h2><span>03</span> Data Ownership</h2>
-            <p>You remain the sole owner of your data. SwiftPurge operates entirely on the client-side (your browser).
+            <h2><span>03</span> <span data-i18n="policy_section_3">Data Ownership</span></h2>
+            <p data-i18n="policy_p_3">You remain the sole owner of your data. SwiftPurge operates entirely on the
+                client-side (your browser).
                 We do not have a server to receive, process, or store your activity. Any report you download (HTML or
                 JSON) is built locally on your hardware.</p>
 
-            <h2><span>04</span> Data Deletion</h2>
-            <p>Since all data is local to your browser, you can delete it at any time by:</p>
-            <ul style="margin-left: 20px; color: var(--text-dim); margin-bottom: 24px;">
-                <li><strong>Uninstalling the Extension:</strong> This action will automatically wipe all settings and
-                    logs stored by the extension from your browser.</li>
-            </ul>
-
-            <h2><span>05</span> Third-Party Interaction</h2>
-            <p>The extension allows you to open external support pages (Buy Me a Coffee). These sites have their own
-                privacy policies. SwiftPurge does not pass any of your TikTok data or local logs to these external
-                websites.</p>
-
-            <h2><span>07</span> Legal Disclaimer</h2>
-            <p>SwiftPurge is an independent tool and is <strong>not affiliated, associated, authorized, endorsed by, or
+            <h2><span>07</span> <span data-i18n="policy_section_7">Legal Disclaimer</span></h2>
+            <p data-i18n="policy_p_7_1">SwiftPurge is an independent tool and is <strong>not affiliated, associated,
+                    authorized, endorsed by, or
                     in any way officially connected with TikTok</strong>, ByteDance Ltd, or any of its subsidiaries or
                 its affiliates. The names TikTok as well as related names, marks, emblems and images are registered
                 trademarks of their respective owners.</p>
-            <p>The use of this extension is at your own risk. The developer is not responsible for any account
+            <p data-i18n="policy_p_7_2">The use of this extension is at your own risk. The developer is not responsible
+                for any account
                 restrictions, bans, or data loss resulting from the use of this automation tool. Users are encouraged to
                 use the "Safe" speed settings to comply with platform guidelines.</p>
 
-            <h2><span>08</span> Contact</h2>
-            <p>SwiftPurge is developed by <strong>wen7090dev</strong>. For inquiries regarding this policy or the
+            <h2><span>08</span> <span data-i18n="policy_section_8">Contact</span></h2>
+            <p data-i18n="policy_p_8">SwiftPurge is developed by <strong>wen7090dev</strong>. For inquiries regarding
+                this policy or the
                 extension's behavior, please refer to the support section on the web store.</p>
         </div>
     </div>
 
     <footer style="text-align: center; margin-top: 60px; color: var(--text-dim); font-size: 0.85rem;">
-        &copy; 2026 SwiftPurge &bull; Transparent Automation Studio.
+        &copy; 2026 SwiftPurge &bull; <span data-i18n="footer_text">Transparent Automation Studio.</span>
     </footer>
+    <script>
+        function toggleMenu() {
+            document.getElementById('mobileMenu').classList.toggle('active');
+            document.querySelector('.menu-btn').classList.toggle('active');
+        }
+    </script>
 </body>
 
 </html>
