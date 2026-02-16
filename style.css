@@ -6,7 +6,8 @@
     --card-bg: rgba(255, 255, 255, 0.03);
     --border: rgba(255, 255, 255, 0.1);
     --text: #ffffff;
-    --text-dim: #88888e;
+    --text-dim: #a1a1aa;
+    /* Improved contrast for accessibility */
     --success: #00f2ea;
 }
 
@@ -343,9 +344,10 @@ h1 {
     overflow: hidden;
     opacity: 0;
     visibility: hidden;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     margin-top: -10px;
     padding-top: 15px;
+    transform: translateY(-10px);
 }
 
 .dropdown.active .dropdown-content {
@@ -353,6 +355,7 @@ h1 {
     opacity: 1;
     visibility: visible;
     padding-bottom: 10px;
+    transform: translateY(0);
 }
 
 .dropdown-content a {

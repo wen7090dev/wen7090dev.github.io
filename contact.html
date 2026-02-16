@@ -35,7 +35,7 @@
     <div class="noise"></div>
     <div class="bg-glow"></div>
     <nav class="main-nav">
-        <div class="menu-btn" onclick="toggleMenu()" aria-label="Toggle Navigation Menu">
+        <div class="menu-btn" onclick="toggleMenu()" aria-label="Menu" role="button" tabindex="0">
             <div class="hamburger"></div>
         </div>
         <div class="nav-container-new" id="mobileMenu">
@@ -43,9 +43,9 @@
             <a href="contact.html" data-i18n="nav_contact" class="active">Contact</a>
             <div class="lang-selector">
                 <span onclick="setLanguage('en'); if(window.innerWidth <= 768) toggleMenu()" class="lang-btn"
-                    data-lang="en" aria-label="Switch to English">EN</span>
+                    data-lang="en" aria-label="Switch to English" role="button" tabindex="0">EN</span>
                 <span onclick="setLanguage('fr'); if(window.innerWidth <= 768) toggleMenu()" class="lang-btn"
-                    data-lang="fr" aria-label="Switch to French">FR</span>
+                    data-lang="fr" aria-label="Switch to French" role="button" tabindex="0">FR</span>
             </div>
         </div>
     </nav>

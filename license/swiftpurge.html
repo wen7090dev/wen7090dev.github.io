@@ -14,13 +14,23 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../style.css">
+    <!-- Social Media Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://wen7090dev.github.io/license/swiftpurge.html">
+    <meta property="og:title" content="License | SwiftPurge">
+    <meta property="og:description" content="License agreement for the SwiftPurge browser extension.">
+    <meta property="og:image" content="https://wen7090dev.github.io/favicon.svg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="License | SwiftPurge">
+    <meta name="twitter:description" content="License agreement for the SwiftPurge browser extension.">
+    <meta name="twitter:image" content="https://wen7090dev.github.io/favicon.svg">
 </head>
 
 <body>
     <div class="noise"></div>
     <div class="bg-glow"></div>
     <nav class="main-nav">
-        <div class="menu-btn" onclick="toggleMenu()" aria-label="Toggle Navigation Menu">
+        <div class="menu-btn" onclick="toggleMenu()" aria-label="Menu" role="button" tabindex="0">
             <div class="hamburger"></div>
         </div>
         <div class="nav-container-new" id="mobileMenu">
@@ -28,9 +38,9 @@
             <a href="../contact.html" data-i18n="nav_contact">Contact</a>
             <div class="lang-selector">
                 <span onclick="setLanguage('en'); if(window.innerWidth <= 768) toggleMenu()" class="lang-btn"
-                    data-lang="en" aria-label="Switch to English">EN</span>
+                    data-lang="en" aria-label="Switch to English" role="button" tabindex="0">EN</span>
                 <span onclick="setLanguage('fr'); if(window.innerWidth <= 768) toggleMenu()" class="lang-btn"
-                    data-lang="fr" aria-label="Switch to French">FR</span>
+                    data-lang="fr" aria-label="Switch to French" role="button" tabindex="0">FR</span>
             </div>
         </div>
     </nav>
