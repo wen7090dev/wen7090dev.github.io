@@ -9,29 +9,39 @@
         content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://raw.githubusercontent.com https://img.buymeacoffee.com https://www.google.com https://thebrowser.company https://icons.duckduckgo.com; connect-src 'self';">
     <title>wen7090dev | Automation & Productivity Tools</title>
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    <script src="i18n.js"></script>
+
+    <!-- PERFORMANCE BOOST: Preload critical assets -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap">
+    <link rel="preload" as="style" href="style.css">
+
+    <!-- Optimized Font & CSS Loading -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet"
+        media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="style.css">
+    <script src="i18n.js" defer></script>
+
     <meta name="description"
         content="Portfolio of wen7090dev, specializing in high-performance browser automation and privacy tools. Creator of SwiftPurge for TikTok.">
     <meta name="keywords"
         content="TikTok automation, browser extensions, SwiftPurge, privacy tools, web automation, wen7090dev">
+
     <!-- Social Media Meta Tags -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://wen7090dev.github.io/">
     <meta property="og:title" content="wen7090dev | Automation & Productivity Tools">
     <meta property="og:description"
         content="I build lightweight, high-performance automation extensions that save you hours of manual work.">
-    <meta property="og:image" content="https://wen7090dev.github.io/og-image.png">
+    <meta property="og:image" content="https://wen7090dev.github.io/favicon.svg">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="wen7090dev | Automation & Productivity Tools">
     <meta name="twitter:description"
         content="I build lightweight, high-performance automation extensions that save you hours of manual work.">
-    <meta name="twitter:image" content="https://wen7090dev.github.io/og-image.png">
+    <meta name="twitter:image" content="https://wen7090dev.github.io/favicon.svg">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     <meta name="google-site-verification" content="YndeoOG9JPz8bc-mAB0oFweok33OW1259_r-KQe0lww" />
-    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>

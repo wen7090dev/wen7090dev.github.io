@@ -6,8 +6,8 @@
     --card-bg: rgba(255, 255, 255, 0.03);
     --border: rgba(255, 255, 255, 0.1);
     --text: #ffffff;
-    --text-dim: #a1a1aa;
-    /* Improved contrast for accessibility */
+    --text-dim: #c1c1c1;
+    /* Maximum contrast for accessibility */
     --success: #00f2ea;
 }
 
@@ -121,7 +121,7 @@ h1 {
     font-weight: 800;
     letter-spacing: -2px;
     margin-bottom: 20px;
-    background: linear-gradient(to bottom, #fff 40%, #888);
+    background: linear-gradient(to bottom, #fff 50%, #bbb);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
