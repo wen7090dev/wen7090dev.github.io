@@ -1,14 +1,13 @@
 /* Global Design Tokens */
 :root {
-    --primary: #e62a50;
-    /* Darkened slightly for better WCAG contrast */
+    --primary: #be163d;
+    /* Deep ruby for perfect AAA contrast */
     --accent: #FFDD00;
     --bg: #0a0a0c;
     --card-bg: rgba(255, 255, 255, 0.03);
     --border: rgba(255, 255, 255, 0.1);
     --text: #ffffff;
-    --text-dim: #c1c1c1;
-    /* Maximum contrast for accessibility */
+    --text-dim: #cccccc;
     --success: #00f2ea;
 }
 
@@ -208,8 +207,9 @@ h1 {
     justify-content: center;
     border-radius: 50%;
     transition: 0.3s ease;
-    opacity: 0.4;
-    font-size: 11px;
+    opacity: 0.6;
+    font-size: 13px;
+    /* Slightly larger for visibility */
     font-weight: 800;
 }
 
