@@ -8,7 +8,9 @@
     <meta http-equiv="Content-Security-Policy"
         content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://raw.githubusercontent.com https://img.buymeacoffee.com https://www.google.com https://thebrowser.company https://icons.duckduckgo.com; connect-src 'self';">
     <title>Privacy Policy | SwiftPurge</title>
-    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <meta name="robots" content="noindex">
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg" sizes="any">
+    <link rel="manifest" href="/manifest.json">
     <script src="../i18n.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,11 +21,13 @@
     <meta property="og:url" content="https://wen7090dev.github.io/privacy-policy/swiftpurge.html">
     <meta property="og:title" content="Privacy Policy | SwiftPurge">
     <meta property="og:description" content="Privacy policy for the SwiftPurge browser extension.">
-    <meta property="og:image" content="https://wen7090dev.github.io/favicon.svg">
+    <meta property="og:image" content="https://wen7090dev.github.io/banner.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Privacy Policy | SwiftPurge">
     <meta name="twitter:description" content="Privacy policy for the SwiftPurge browser extension.">
-    <meta name="twitter:image" content="https://wen7090dev.github.io/favicon.svg">
+    <meta name="twitter:image" content="https://wen7090dev.github.io/banner.png">
 </head>
 
 <body>
@@ -139,7 +143,7 @@
     </div>
 
     <footer class="reveal">
-        <p>&copy; 2026 SwiftPurge • <span data-i18n="footer_text">Transparent Automation Studio.</span></p>
+        <p>&copy; <span id="year"></span> SwiftPurge • <span data-i18n="footer_text">Transparent Automation Studio.</span></p>
         <p style="font-size: 0.75rem; margin-top: 10px; color: #999;">
             <span data-i18n="site_privacy_notice">No cookies • No data collection • 100% Privacy</span>
             <br>
@@ -166,6 +170,20 @@
         }, observerOptions);
 
         document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js').then(registration => {
+                    console.log('SW registered: ', registration);
+                }).catch(registrationError => {
+                    console.log('SW registration failed: ', registrationError);
+                });
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+             document.getElementById('year').textContent = new Date().getFullYear();
+        });
     </script>
 </body>
 

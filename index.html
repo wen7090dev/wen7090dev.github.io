@@ -7,8 +7,10 @@
     <meta name="theme-color" content="#fe2c55">
     <meta http-equiv="Content-Security-Policy"
         content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://raw.githubusercontent.com https://img.buymeacoffee.com https://www.google.com https://thebrowser.company https://icons.duckduckgo.com; connect-src 'self';">
-    <title>wen7090dev | Automation & Productivity Tools</title>
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <title>wen7090dev | Digital Architect & Creative Developer</title>
+    <link rel="canonical" href="https://wen7090dev.github.io/">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" sizes="any">
+    <link rel="manifest" href="/manifest.json">
 
     <!-- PERFORMANCE BOOST: Preload critical assets -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,24 +26,41 @@
     <script src="i18n.js" defer></script>
 
     <meta name="description"
-        content="Portfolio of wen7090dev, specializing in high-performance browser automation and privacy tools. Creator of SwiftPurge for TikTok.">
+        content="Portfolio of wen7090dev, featuring innovative digital tools, web games, and high-performance automation solutions.">
     <meta name="keywords"
-        content="TikTok automation, browser extensions, SwiftPurge, privacy tools, web automation, wen7090dev">
+        content="wen7090dev, web games, browser extensions, automation tools, creative coding, digital architect">
 
     <!-- Social Media Meta Tags -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://wen7090dev.github.io/">
-    <meta property="og:title" content="wen7090dev | Automation & Productivity Tools">
+    <meta property="og:title" content="wen7090dev | Digital Architect & Creative Developer">
     <meta property="og:description"
-        content="I build lightweight, high-performance automation extensions that save you hours of manual work.">
-    <meta property="og:image" content="https://wen7090dev.github.io/favicon.svg">
+        content="Explore a diverse portfolio of web games, automation tools, and creative digital experiences.">
+    <meta property="og:image" content="https://wen7090dev.github.io/banner.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="wen7090dev | Automation & Productivity Tools">
+    <meta name="twitter:title" content="wen7090dev | Digital Architect & Creative Developer">
     <meta name="twitter:description"
-        content="I build lightweight, high-performance automation extensions that save you hours of manual work.">
-    <meta name="twitter:image" content="https://wen7090dev.github.io/favicon.svg">
+        content="Explore a diverse portfolio of web games, automation tools, and creative digital experiences.">
+    <meta name="twitter:image" content="https://wen7090dev.github.io/banner.png">
 
     <meta name="google-site-verification" content="YndeoOG9JPz8bc-mAB0oFweok33OW1259_r-KQe0lww" />
+
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "wen7090dev",
+      "url": "https://wen7090dev.github.io/",
+      "jobTitle": "Digital Architect & Full Stack Developer",
+      "knowsAbout": ["Web Development", "Game Design", "Browser Extensions", "Creative Coding", "Automation"],
+      "sameAs": [
+        "https://github.com/wen7090dev"
+      ]
+    }
+    </script>
 </head>
 
 <body>
@@ -176,6 +195,7 @@
                 saved you time or made
                 your life easier, consider fueling the next one with a coffee!</p>
             <a href="https://www.buymeacoffee.com/wen7090" target="_blank" class="btn btn-support"
+                aria-label="Buy me a coffee"
                 style="padding: 0; border: none; background: transparent; display: inline-block; transition: all 0.3s ease;">
                 <img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=wen7090&button_colour=FFDD00&font_colour=000000&font_family=Inter&outline_colour=000000&coffee_colour=ffffff"
                     alt="Buy Me a Coffee" width="235" height="50"
@@ -184,7 +204,7 @@
         </div>
 
         <footer>
-            <p>&copy; 2026 wen7090dev • <span data-i18n="footer_text">All tools built with precision and care.</span>
+            <p>&copy; <span id="year"></span> wen7090dev • <span data-i18n="footer_text">All tools built with precision and care.</span>
             </p>
             <p style="font-size: 0.75rem; margin-top: 10px; color: #999;">
                 <span data-i18n="site_privacy_notice">No cookies • No data collection • 100% Privacy</span>
@@ -244,8 +264,19 @@
 
         document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js').then(registration => {
+                    console.log('SW registered: ', registration);
+                }).catch(registrationError => {
+                    console.log('SW registration failed: ', registrationError);
+                });
+            });
+        }
+
         document.addEventListener('DOMContentLoaded', () => {
             detectBrowser();
+            document.getElementById('year').textContent = new Date().getFullYear();
         });
     </script>
 </body>

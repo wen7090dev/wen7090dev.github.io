@@ -8,12 +8,12 @@
     <meta http-equiv="Content-Security-Policy"
         content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://raw.githubusercontent.com https://img.buymeacoffee.com https://www.google.com https://thebrowser.company https://icons.duckduckgo.com; connect-src 'self';">
     <title>404 - Page Not Found | wen7090dev</title>
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    <script src="i18n.js"></script>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" sizes="any">
+    <script src="/i18n.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/style.css">
     <!-- Social Media Meta Tags -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://wen7090dev.github.io/404.html">
@@ -32,6 +32,7 @@
             justify-content: center;
             align-items: center;
             text-align: center;
+            animation: fadeInPage 1s ease-out;
         }
 
         .error-code {
@@ -59,7 +60,7 @@
     <div class="error-container">
         <div class="error-code">404</div>
         <div class="error-message" data-i18n="error_404_msg">You've reached a ghost page.</div>
-        <a href="index.html" class="copy-email-btn" style="text-decoration: none;">
+        <a href="/index.html" class="copy-email-btn" style="text-decoration: none;">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                 stroke-linecap="round" stroke-linejoin="round">
                 <path d="m15 18-6-6 6-6" />

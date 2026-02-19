@@ -18,12 +18,15 @@
     <meta property="og:url" content="https://wen7090dev.github.io/contact.html">
     <meta property="og:title" content="Contact | wen7090dev">
     <meta property="og:description" content="Reach out for collaboration or support regarding automation tools.">
-    <meta property="og:image" content="https://wen7090dev.github.io/favicon.svg">
+    <meta property="og:image" content="https://wen7090dev.github.io/banner.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Contact | wen7090dev">
     <meta name="twitter:description" content="Reach out for collaboration or support.">
-    <meta name="twitter:image" content="https://wen7090dev.github.io/favicon.svg">
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <meta name="twitter:image" content="https://wen7090dev.github.io/banner.png">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" sizes="any">
+    <link rel="manifest" href="/manifest.json">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
@@ -108,7 +111,7 @@
             </a>
 
             <!-- DISCORD / SUPPORT CARD -->
-            <a href="https://www.buymeacoffee.com/wen7090" target="_blank" class="contact-card support-card-fix">
+            <a href="https://www.buymeacoffee.com/wen7090" target="_blank" class="contact-card support-card-fix" aria-label="Support me on Buy Me a Coffee">
                 <div class="card-icon-big" style="background: rgba(255, 221, 0, 0.1); color: #FFDD00;">
                     <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                         stroke-linecap="round" stroke-linejoin="round">
@@ -128,7 +131,7 @@
         </div>
 
         <footer>
-            <p>&copy; 2026 wen7090dev • <span data-i18n="footer_text">All tools built with precision and care.</span>
+            <p>&copy; <span id="year"></span> wen7090dev • <span data-i18n="footer_text">All tools built with precision and care.</span>
             </p>
             <p style="font-size: 0.75rem; margin-top: 10px; color: #999;">
                 <span data-i18n="site_privacy_notice">No cookies • No data collection • 100% Privacy</span>
@@ -181,6 +184,20 @@
         }, observerOptions);
 
         document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+        
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js').then(registration => {
+                    console.log('SW registered: ', registration);
+                }).catch(registrationError => {
+                    console.log('SW registration failed: ', registrationError);
+                });
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+             document.getElementById('year').textContent = new Date().getFullYear();
+        });
     </script>
 </body>
 
