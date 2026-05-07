@@ -1,0 +1,305 @@
+const PORTFOLIO_TRANSLATIONS = {
+    en: {
+        nav_projects: "Projects",
+        nav_contact: "Contact",
+        tagline: "I build innovative digital tools, immersive web experiences, and high-performance automation solutions.",
+        swiftpurge_desc: "The ultimate privacy tool for TikTok. Automatically clean your likes, reposts, and favorites with smart human-mimicking algorithms.",
+        view_privacy: "View Privacy Policy",
+        get_swiftpurge: "Get SwiftPurge",
+        coming_soon: "(Coming)",
+        footer_text: "Crafting digital excellence, one project at a time.",
+        site_legal: "Legal Notice",
+        site_privacy_notice: "No cookies • No data collection • 100% Privacy",
+        active_users: "Active Users",
+        new_release: "NEW RELEASE",
+        support_title: "Support my work",
+        support_desc: "I focus on creating high-quality tools and creative experiences for everyone. If any of my projects were useful or fun, consider supporting the next one with a coffee!",
+        contact_title: "Get in Touch",
+        contact_subtitle: "No complicated forms. Contact me directly on your favorite platform.",
+        contact_github: "GitHub",
+        contact_info_h2: "Contact Information",
+        contact_info_p: "Feel free to reach out for support, business inquiries, or just to say hi. I'll get back to you as soon as possible.",
+        form_name: "Name",
+        form_email: "Email",
+        form_message: "Message",
+        form_submit: "Send Message",
+        form_success: "Thank you! Your message has been sent.",
+        form_error: "Oops! Something went wrong. Please try again.",
+        contact_write: "Write",
+        contact_copy: "Copy",
+        contact_copied: "Email Copied!",
+        contact_visit: "Visit Profile",
+        contact_fuel: "Fuel the work",
+        contact_support: "Support",
+        contact_coffee: "Buy me a coffee",
+        current_browser: "Current",
+        // Privacy Policy
+        policy_back: "Back to Portfolio",
+        policy_title: "Privacy Policy",
+        policy_effective: "Effective Date: February 15, 2026",
+        policy_subtitle: "Transparent data management for SwiftPurge.",
+        policy_summary_h3: "Quick Summary",
+        policy_summary_1: "No personal data is collected or transmitted externally.",
+        policy_summary_2: "Activity logs are purely local and exist for your reports.",
+        policy_summary_3: "We never access your TikTok password or login credentials.",
+        policy_summary_4: "No ads, no tracking, and no external cookies.",
+        policy_section_1: "Local Data Storage",
+        policy_section_1_title: "Local Data Storage",
+        policy_p_1: "SwiftPurge stores minimal information locally in your browser's chrome.storage.local area. This data is never shared with us:",
+        policy_list_1_1: "<strong>User Preferences:</strong> Your selected interface language, cleaning speed, and action limits.",
+        policy_list_1_2: "<strong>Access Token:</strong> A local timestamp that records when the Advanced Mode was unlocked.",
+        policy_list_1_3: "<strong>Action History:</strong> A list of cleaning tasks performed used to generate your rapports.",
+        policy_section_2: "Permissions Breakdown",
+        policy_p_2: "To automate tasks on TikTok, the extension requires the following permissions:",
+        policy_section_3: "Data Ownership",
+        policy_p_3: "You remain the sole owner of your data. SwiftPurge operates entirely on the client-side.",
+        policy_section_7: "Legal Disclaimer",
+        policy_p_7_1: "SwiftPurge is an independent tool and is not affiliated with TikTok.",
+        policy_p_7_2: "The use of this extension is at your own risk.",
+        policy_section_8: "Contact",
+        policy_p_8: "SwiftPurge is developed by <strong>wen7090dev</strong>. For any questions regarding this policy, you can contact me at <a href='mailto:wen7090dev@gmail.com' style='color: var(--primary); text-decoration: none;'>wen7090dev@gmail.com</a> or visit my portfolio at <a href='https://wen7090dev.github.io/' style='color: var(--primary); text-decoration: none;'>wen7090dev.github.io</a>.",
+        // License
+        view_license: "View License",
+        license_title: "End-User License Agreement",
+        license_effective: "Last Updated: February 16, 2026",
+        license_subtitle: "Standard License Terms for SwiftPurge.",
+        license_section_1: "Personal Use Only",
+        license_p_1: "This software is provided for personal, non-commercial use only. You may not sell, redistribute, or use this tool for commercial automation services without prior written consent.",
+        license_section_2: "Restrictions",
+        license_p_2: "You agree not to attempt to reverse engineer, decompile, or modify the core functionality of the extension to bypass security measures or subscription checks.",
+        license_section_3: "Liability",
+        license_p_3: "The software is provided 'as is'. The developer is not responsible for any misuse, account suspensions, or data loss resulting from the use of this software on the TikTok platform.",
+        extension_version: "1.0.0",
+        error_404_msg: "You've reached a ghost page.",
+
+        // ── Discord RPC Manager ──
+        view_source: "Source Code",
+        drpc_desc: "A powerful desktop application to fully customize your Discord Rich Presence. Create profiles, set timers, auto-detect media from Spotify, Steam, and more — on Windows, macOS, and Linux.",
+        get_drpc: "Get Discord RPC Manager",
+        drpc_version: "1.0.0",
+        drpc_disclaimer: "Not affiliated with Discord Inc.",
+        // License
+        drpc_license_effective: "Last Updated: May 7, 2026",
+        drpc_license_subtitle: "Non-Commercial, Attribution Protected, Share-Alike License.",
+        drpc_license_section_1: "Grant of License",
+        drpc_license_p_1: "Permission is hereby granted, free of charge, to any person to use, study, modify, and redistribute this software and derivative works — for <strong>personal and non-commercial purposes only</strong> — subject to all conditions below.",
+        drpc_license_section_2: "Non-Commercial Restriction",
+        drpc_license_p_2: "The Software, including all derivative works and forks, <strong>may not</strong> be sold, licensed, or used for any commercial purpose or financial gain, whether directly or indirectly.",
+        drpc_license_section_3: "Mandatory Attribution & Credits",
+        drpc_license_p_3: "The links to <strong>wen7090dev</strong>'s Portfolio, GitHub, and Coffee page are mandatory and must remain visible and functional in the application's UI at all times. You may add your own links alongside the originals, but may not remove, modify, hide, or redirect them.",
+        drpc_license_section_4: "Fork & Modification Disclosure",
+        drpc_license_p_4: "If you distribute a modified version, you must clearly state — in both the app's UI and its README — that your version is a <strong>modified fork of Discord RPC Manager by wen7090dev</strong>, and include a visible link to the original repository.",
+        drpc_license_section_5: "Share-Alike (Copyleft)",
+        drpc_license_p_5: "Any derivative work, fork, or redistribution <strong>must</strong> be distributed under this exact same license. You may not re-license this Software or any derivative work under any other license (MIT, GPL, Apache, proprietary, etc.).",
+        drpc_license_section_6: "Source Code Requirement",
+        drpc_license_p_6: "If you distribute a modified version in any form, you <strong>must</strong> also make the full source code of your modifications publicly available, at no cost, under this same license.",
+        drpc_license_section_7: "Ethical Use",
+        drpc_license_p_7: "The Software may not be used to create, distribute, or promote malware, spyware, ransomware, or any software that harms the user's system or privacy.",
+        drpc_license_section_8: "Redistribution & Liability",
+        drpc_license_p_8: "Redistribution is permitted provided this license is included in all copies and all conditions are met. The original author (<strong>wen7090dev</strong>) is not responsible for any damages caused by modified versions distributed by third parties.",
+        drpc_license_disclaimer: "Discord RPC Manager is an independent tool and is <strong>not affiliated, associated, authorized, endorsed by, or in any way officially connected with Discord Inc.</strong> The Discord name, logo, and related marks are registered trademarks of Discord Inc.",
+        // Privacy
+        drpc_policy_effective: "Effective Date: May 6, 2026",
+        drpc_policy_subtitle: "Transparent data practices for Discord RPC Manager.",
+        drpc_policy_summary_1: "All data is stored locally on your device — nothing is sent to external servers.",
+        drpc_policy_summary_2: "Your RPC profiles, settings, and logs never leave your machine.",
+        drpc_policy_summary_3: "The weather feature makes optional API calls only when you explicitly use it.",
+        drpc_policy_summary_4: "No ads, no analytics, no telemetry of any kind.",
+        drpc_policy_section_1: "Local Data Storage",
+        drpc_policy_p_1: "Discord RPC Manager stores all application data locally on your device. On Windows: <code>%APPDATA%\\Discord RPC Manager</code>. In portable mode: next to the executable. This data is never transmitted externally:",
+        drpc_policy_list_1_1: "<strong>RPC Profiles:</strong> Your custom Rich Presence configurations (titles, descriptions, images, buttons, timers, rotation settings).",
+        drpc_policy_list_1_2: "<strong>Application Settings:</strong> Theme, language, auto-launch preference, notification settings.",
+        drpc_policy_list_1_3: "<strong>Activity Logs:</strong> Recent connection events and errors, stored locally for troubleshooting.",
+        drpc_policy_section_2: "Network Access",
+        drpc_policy_p_2: "The application makes the following limited, user-initiated network requests:",
+        drpc_policy_section_3: "System Access",
+        drpc_policy_p_3: "To detect currently playing media, the app reads system-level media information using platform-native APIs: Windows Media Session (SMTC) on Windows, playerctl via MPRIS on Linux, and AppleScript on macOS. This data is used exclusively to populate your Rich Presence and is never stored or transmitted.",
+        drpc_policy_section_7: "Legal Disclaimer",
+        drpc_policy_p_7_1: "Discord RPC Manager is an independent tool and is <strong>not affiliated, associated, authorized, endorsed by, or in any way officially connected with Discord Inc.</strong> The Discord name, logo, and related marks are registered trademarks of Discord Inc.",
+        drpc_policy_p_7_2: "Use of this software is at your own risk. The developer is not responsible for any account restrictions or actions taken by Discord as a result of Rich Presence activity.",
+        drpc_policy_p_8: "Discord RPC Manager is developed by <strong>wen7090dev</strong>. For any questions regarding this policy, contact me at <a href='mailto:wen7090dev@gmail.com' style='color: var(--primary); text-decoration: none;'>wen7090dev@gmail.com</a> or visit <a href='https://wen7090dev.github.io/' style='color: var(--primary); text-decoration: none;'>wen7090dev.github.io</a>.",
+        // Permission cards
+        drpc_perm_rpc_title: "Discord RPC (Local IPC)",
+        drpc_perm_rpc_desc: "Connects to Discord's local Rich Presence socket (named pipe on Windows, Unix socket on macOS/Linux — port 6463–6472). This is a local-only connection; no internet traffic is involved.",
+        drpc_perm_github_title: "GitHub Releases API",
+        drpc_perm_github_desc: "The app periodically checks GitHub's public releases endpoint to notify you of available updates. No account or personal data is transmitted.",
+        drpc_perm_assets_title: "Discord Asset API (Optional)",
+        drpc_perm_assets_desc: "When you enter a Discord application ID in the profile editor, the app may fetch that application's public assets (name, icon) from Discord's API to display a preview.",
+        drpc_perm_steam_title: "Steam API (Optional)",
+        drpc_perm_steam_desc: "If Steam detection is active, the app reads your local Steam registry to identify the current game ID, then queries Steam's public API to retrieve the game name. No authentication or personal data is sent.",
+        drpc_perm_weather_title: "Weather API — wttr.in (Optional)",
+        drpc_perm_weather_desc: "If you use the <code>{weather:City}</code> variable in a profile, the app queries wttr.in with the city name you specified to fetch current weather data. No personal information is included in the request.",
+    },
+    fr: {
+        nav_projects: "Projets",
+        nav_contact: "Contact",
+        tagline: "Je conçois des outils numériques innovants, des expériences web immersives et des solutions d'automatisation performantes.",
+        swiftpurge_desc: "L'outil de confidentialité ultime pour TikTok. Nettoyez automatiquement vos likes, reposts et favoris avec des algorithmes intelligents.",
+        view_privacy: "Voir la politique de confidentialité",
+        get_swiftpurge: "Obtenir SwiftPurge",
+        coming_soon: "(Bientôt)",
+        footer_text: "L'excellence numérique, un projet à la fois.",
+        site_legal: "Mentions Légales",
+        site_privacy_notice: "Aucun cookie • Aucune collecte de données • 100% Privé",
+        active_users: "Utilisateurs Actifs",
+        new_release: "NOUVEAUTÉ",
+        support_title: "Soutenir mon travail",
+        support_desc: "Je me concentre sur la création d'outils de qualité et d'expériences créatives pour tous. Si l'un de mes projets vous a été utile ou vous a diverti, n'hésitez pas à soutenir le prochain avec un café !",
+        contact_title: "Me Contacter",
+        contact_subtitle: "Pas de formulaires compliqués. Contactez-moi directement sur votre plateforme préférée.",
+        contact_github: "GitHub",
+        contact_info_h2: "Informations de Contact",
+        contact_info_p: "N'hésitez pas à me contacter pour du support, des demandes commerciales ou simplement pour dire bonjour. Je vous répondrai dès que possible.",
+        form_name: "Nom",
+        form_email: "Email",
+        form_message: "Message",
+        form_submit: "Envoyer le message",
+        form_success: "Merci ! Votre message a été envoyé.",
+        form_error: "Oups ! Une erreur est survenue. Veuillez réessayer.",
+        contact_write: "Écrire",
+        contact_copy: "Copier",
+        contact_copied: "Email Copié !",
+        contact_visit: "Voir le profil",
+        contact_fuel: "Soutenir mes projets",
+        contact_support: "Support",
+        contact_coffee: "Offrez-moi un café",
+        current_browser: "Actuel",
+        // Privacy Policy
+        policy_back: "Retour au Portfolio",
+        policy_title: "Politique de Confidentialité",
+        policy_effective: "Date d'effet : 15 Février 2026",
+        policy_subtitle: "Gestion transparente des données pour SwiftPurge.",
+        policy_summary_h3: "Résumé Rapide",
+        policy_summary_1: "Aucune donnée personnelle n'est collectée ou transmise à l'extérieur.",
+        policy_summary_2: "Les journaux d'activité sont purement locaux pour vos rapports.",
+        policy_summary_3: "Nous n'accédons jamais à votre mot de passe ou identifiants TikTok.",
+        policy_summary_4: "Pas de publicité, pas de tracking, pas de cookies externes.",
+        policy_section_1: "Stockage Local des Données",
+        policy_section_1_title: "Stockage Local des Données",
+        policy_p_1: "SwiftPurge stocke un minimum d'informations localement dans l'espace chrome.storage.local de votre navigateur. Ces données ne nous sont jamais partagées :",
+        policy_list_1_1: "<strong>Préférences Utilisateur :</strong> Langue choisie, vitesse de nettoyage et limites d'actions.",
+        policy_list_1_2: "<strong>Jeton d'Accès :</strong> Un horodatage local indiquant quand le Mode Avancé a été débloqué.",
+        policy_list_1_3: "<strong>Historique d'Actions :</strong> Liste des tâches effectuées pour générer vos rapports.",
+        policy_section_2: "Détails des Permissions",
+        policy_p_2: "Pour automatiser les tâches sur TikTok, l'extension nécessite les permissions suivantes :",
+        policy_section_3: "Propriété des Données",
+        policy_p_3: "Vous restez le seul propriétaire de vos données. SwiftPurge fonctionne entièrement côté client.",
+        policy_section_7: "Clause de Non-Responsabilité",
+        policy_p_7_1: "SwiftPurge est un outil indépendant et n'est pas affilié à TikTok.",
+        policy_p_7_2: "L'utilisation de cette extension est à vos propres risques.",
+        policy_section_8: "Contact",
+        policy_p_8: "SwiftPurge est développé par <strong>wen7090dev</strong>. Pour toute question concernant cette politique, vous pouvez me contacter à <a href='mailto:wen7090dev@gmail.com' style='color: var(--primary); text-decoration: none;'>wen7090dev@gmail.com</a> ou visiter mon portfolio sur <a href='https://wen7090dev.github.io/' style='color: var(--primary); text-decoration: none;'>wen7090dev.github.io</a>.",
+        // License
+        view_license: "Voir la Licence",
+        license_title: "Contrat de Licence Utilisateur Final",
+        license_effective: "Dernière mise à jour : 16 Février 2026",
+        license_subtitle: "Conditions de licence standard pour SwiftPurge.",
+        license_section_1: "Usage Personnel Uniquement",
+        license_p_1: "Ce logiciel est fourni pour un usage personnel et non commercial uniquement. Vous ne pouvez pas vendre, redistribuer ou utiliser cet outil pour des services d'automatisation commerciale sans consentement écrit préalable.",
+        license_section_2: "Restrictions",
+        license_p_2: "Vous acceptez de ne pas tenter de faire de l'ingénierie inverse, de décompiler ou de modifier les fonctionnalités de base de l'extension pour contourner les mesures de sécurité ou les vérifications d'abonnement.",
+        license_section_3: "Responsabilité",
+        license_p_3: "Le logiciel est fourni 'en l'état'. Le développeur n'est pas responsable de toute mauvaise utilisation, suspension de compte ou perte de données résultant de l'utilisation de ce logiciel sur la plateforme TikTok.",
+        extension_version: "1.0.0",
+        error_404_msg: "Vous êtes arrivé sur une page fantôme.",
+
+        // ── Discord RPC Manager ──
+        view_source: "Code Source",
+        drpc_desc: "Une application de bureau puissante pour personnaliser entièrement votre Discord Rich Presence. Créez des profils, configurez des minuteries, détectez automatiquement les médias de Spotify, Steam et plus — sur Windows, macOS et Linux.",
+        get_drpc: "Obtenir Discord RPC Manager",
+        drpc_version: "1.0.0",
+        drpc_disclaimer: "Non affilié à Discord Inc.",
+        // Licence
+        drpc_license_effective: "Dernière mise à jour : 7 Mai 2026",
+        drpc_license_subtitle: "Licence Non-Commerciale, Attribution Protégée et Share-Alike.",
+        drpc_license_section_1: "Concession de Licence",
+        drpc_license_p_1: "Permission est accordée gratuitement à toute personne d'utiliser, étudier, modifier et redistribuer ce logiciel et ses œuvres dérivées — à des fins <strong>personnelles et non commerciales uniquement</strong> — sous réserve des conditions ci-dessous.",
+        drpc_license_section_2: "Restriction Non-Commerciale",
+        drpc_license_p_2: "Le Logiciel, ainsi que toute œuvre dérivée ou fork, <strong>ne peut pas</strong> être vendu, licencié ou utilisé à des fins commerciales ou lucratives, directement ou indirectement.",
+        drpc_license_section_3: "Attribution & Crédits Obligatoires",
+        drpc_license_p_3: "Les liens vers le Portfolio, GitHub et Coffee de <strong>wen7090dev</strong> sont obligatoires et doivent rester visibles et fonctionnels dans l'interface de l'application. Vous pouvez ajouter vos propres liens à côté des originaux, mais vous ne pouvez pas les supprimer, modifier, masquer ou rediriger.",
+        drpc_license_section_4: "Divulgation du Fork & des Modifications",
+        drpc_license_p_4: "Si vous distribuez une version modifiée, vous devez clairement indiquer — dans l'interface de l'app et dans son README — que votre version est un <strong>fork modifié de Discord RPC Manager par wen7090dev</strong>, avec un lien visible vers le dépôt original.",
+        drpc_license_section_5: "Share-Alike (Copyleft)",
+        drpc_license_p_5: "Toute œuvre dérivée, fork ou redistribution <strong>doit</strong> être distribuée sous cette même licence exacte. Vous ne pouvez pas re-licencier ce Logiciel ou toute œuvre dérivée sous une autre licence (MIT, GPL, Apache, propriétaire, etc.).",
+        drpc_license_section_6: "Exigence du Code Source",
+        drpc_license_p_6: "Si vous distribuez une version modifiée sous quelque forme que ce soit, vous <strong>devez</strong> également rendre le code source complet de vos modifications publiquement disponible, gratuitement, sous cette même licence.",
+        drpc_license_section_7: "Usage Éthique",
+        drpc_license_p_7: "Le Logiciel ne peut pas être utilisé pour créer, distribuer ou promouvoir des logiciels malveillants, espions, rançongiciels ou tout logiciel portant atteinte au système ou à la vie privée de l'utilisateur.",
+        drpc_license_section_8: "Redistribution & Responsabilité",
+        drpc_license_p_8: "La redistribution est autorisée sous réserve que cette licence soit incluse dans toutes les copies et que toutes les conditions soient respectées. L'auteur original (<strong>wen7090dev</strong>) n'est pas responsable des dommages causés par des versions modifiées distribuées par des tiers.",
+        drpc_license_disclaimer: "Discord RPC Manager est un outil indépendant et n'est <strong>pas affilié, associé, autorisé, approuvé ou officiellement connecté à Discord Inc.</strong> Le nom Discord, son logo et les marques associées sont des marques déposées de Discord Inc.",
+        // Confidentialité
+        drpc_policy_effective: "Date d'effet : 6 Mai 2026",
+        drpc_policy_subtitle: "Pratiques de données transparentes pour Discord RPC Manager.",
+        drpc_policy_summary_1: "Toutes les données sont stockées localement sur votre appareil — rien n'est envoyé à des serveurs externes.",
+        drpc_policy_summary_2: "Vos profils RPC, paramètres et journaux ne quittent jamais votre machine.",
+        drpc_policy_summary_3: "La fonction météo effectue des appels API optionnels uniquement si vous l'utilisez explicitement.",
+        drpc_policy_summary_4: "Pas de publicité, pas d'analyse, aucune télémétrie.",
+        drpc_policy_section_1: "Stockage Local des Données",
+        drpc_policy_p_1: "Discord RPC Manager stocke toutes les données localement sur votre appareil. Sous Windows : <code>%APPDATA%\\Discord RPC Manager</code>. En mode portable : à côté de l'exécutable. Ces données ne sont jamais transmises à l'extérieur :",
+        drpc_policy_list_1_1: "<strong>Profils RPC :</strong> Vos configurations Rich Presence personnalisées (titres, descriptions, images, boutons, minuteries, paramètres de rotation).",
+        drpc_policy_list_1_2: "<strong>Paramètres de l'application :</strong> Thème, langue, démarrage automatique, préférences de notification.",
+        drpc_policy_list_1_3: "<strong>Journaux d'activité :</strong> Événements de connexion récents et erreurs, stockés localement pour le dépannage.",
+        drpc_policy_section_2: "Accès Réseau",
+        drpc_policy_p_2: "L'application effectue les requêtes réseau limitées et initiées par l'utilisateur suivantes :",
+        drpc_policy_section_3: "Accès Système",
+        drpc_policy_p_3: "Pour détecter les médias en lecture, l'application lit les informations médias système via des API natives : Session Média Windows (SMTC) sur Windows, playerctl via MPRIS sur Linux, et AppleScript sur macOS. Ces données sont utilisées exclusivement pour alimenter votre Rich Presence et ne sont jamais stockées ni transmises.",
+        drpc_policy_section_7: "Clause de Non-Responsabilité",
+        drpc_policy_p_7_1: "Discord RPC Manager est un outil indépendant et n'est <strong>pas affilié, associé, autorisé, approuvé ou officiellement connecté à Discord Inc.</strong> Le nom Discord, son logo et les marques associées sont des marques déposées de Discord Inc.",
+        drpc_policy_p_7_2: "L'utilisation de ce logiciel est à vos propres risques. Le développeur n'est pas responsable des restrictions ou actions prises par Discord suite à une activité Rich Presence.",
+        drpc_policy_p_8: "Discord RPC Manager est développé par <strong>wen7090dev</strong>. Pour toute question concernant cette politique, contactez-moi à <a href='mailto:wen7090dev@gmail.com' style='color: var(--primary); text-decoration: none;'>wen7090dev@gmail.com</a> ou visitez <a href='https://wen7090dev.github.io/' style='color: var(--primary); text-decoration: none;'>wen7090dev.github.io</a>.",
+        // Cartes de permissions
+        drpc_perm_rpc_title: "Discord RPC (IPC local)",
+        drpc_perm_rpc_desc: "Se connecte au socket Rich Presence local de Discord (named pipe sur Windows, Unix socket sur macOS/Linux — port 6463–6472). Il s'agit d'une connexion uniquement locale ; aucun trafic internet n'est impliqué.",
+        drpc_perm_github_title: "API GitHub Releases",
+        drpc_perm_github_desc: "L'application vérifie périodiquement l'endpoint public des releases GitHub pour vous notifier des mises à jour disponibles. Aucun compte ou donnée personnelle n'est transmis.",
+        drpc_perm_assets_title: "API Discord Assets (Optionnel)",
+        drpc_perm_assets_desc: "Lorsque vous saisissez un ID d'application Discord dans l'éditeur de profil, l'application peut récupérer les ressources publiques de cette application (nom, icône) depuis l'API de Discord pour afficher un aperçu.",
+        drpc_perm_steam_title: "API Steam (Optionnel)",
+        drpc_perm_steam_desc: "Si la détection Steam est active, l'application lit votre registre Steam local pour identifier l'ID du jeu en cours, puis interroge l'API publique de Steam pour récupérer le nom du jeu. Aucune authentification ni donnée personnelle n'est envoyée.",
+        drpc_perm_weather_title: "API Météo — wttr.in (Optionnel)",
+        drpc_perm_weather_desc: "Si vous utilisez la variable <code>{weather:City}</code> dans un profil, l'application interroge wttr.in avec le nom de ville que vous avez spécifié pour récupérer les données météo actuelles. Aucune information personnelle n'est incluse dans la requête.",
+    }
+};
+
+function initLanguage() {
+    let lang = localStorage.getItem('portfolio_lang');
+    if (!lang) {
+        const browserLang = navigator.language || navigator.userLanguage;
+        lang = browserLang.startsWith('fr') ? 'fr' : 'en';
+    }
+    setLanguage(lang);
+}
+
+function setLanguage(lang) {
+    localStorage.setItem('portfolio_lang', lang);
+    document.documentElement.lang = lang;
+
+    const strings = PORTFOLIO_TRANSLATIONS[lang];
+    if (!strings) return;
+
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (strings[key]) {
+            if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+                el.placeholder = strings[key];
+            } else {
+                el.innerHTML = strings[key]; // Use innerHTML to preserve bold/icons
+            }
+        }
+    });
+
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+    });
+}
+
+// Auto-run on load
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initLanguage);
+} else {
+    initLanguage();
+}
+window.addEventListener('load', initLanguage);
+

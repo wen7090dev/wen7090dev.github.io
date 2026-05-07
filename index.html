@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#fe2c55">
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://raw.githubusercontent.com https://img.buymeacoffee.com https://www.google.com https://thebrowser.company https://icons.duckduckgo.com; connect-src 'self';">
+    <title>wen7090dev | Digital Architect & Creative Developer</title>
+    <link rel="canonical" href="https://wen7090dev.github.io/">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" sizes="any">
+    <link rel="manifest" href="/manifest.json">
+
+    <!-- PERFORMANCE BOOST: Preload critical assets -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap">
+    <link rel="preload" as="style" href="style.css">
+
+    <!-- Optimized Font & CSS Loading -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet"
+        media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="style.css">
+    <script src="i18n.js" defer></script>
+
+    <meta name="description"
+        content="Portfolio of wen7090dev, featuring innovative digital tools, web games, and high-performance automation solutions.">
+    <meta name="keywords"
+        content="wen7090dev, web games, browser extensions, automation tools, creative coding, digital architect">
+
+    <!-- Social Media Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://wen7090dev.github.io/">
+    <meta property="og:title" content="wen7090dev | Digital Architect & Creative Developer">
+    <meta property="og:description"
+        content="Explore a diverse portfolio of web games, automation tools, and creative digital experiences.">
+    <meta property="og:image" content="https://wen7090dev.github.io/banner.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="wen7090dev | Digital Architect & Creative Developer">
+    <meta name="twitter:description"
+        content="Explore a diverse portfolio of web games, automation tools, and creative digital experiences.">
+    <meta name="twitter:image" content="https://wen7090dev.github.io/banner.png">
+
+    <meta name="google-site-verification" content="YndeoOG9JPz8bc-mAB0oFweok33OW1259_r-KQe0lww" />
+
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "wen7090dev",
+      "url": "https://wen7090dev.github.io/",
+      "jobTitle": "Digital Architect & Full Stack Developer",
+      "knowsAbout": ["Web Development", "Game Design", "Browser Extensions", "Creative Coding", "Automation"],
+      "sameAs": [
+        "https://github.com/wen7090dev"
+      ]
+    }
+    </script>
+</head>
+
+<body>
+    <div class="noise"></div>
+    <div class="bg-glow"></div>
+
+    <nav class="main-nav">
+        <div class="menu-btn" onclick="toggleMenu()" aria-label="Menu" role="button" tabindex="0">
+            <div class="hamburger"></div>
+        </div>
+        <div class="nav-container-new" id="mobileMenu">
+            <a href="index.html" class="active" data-i18n="nav_projects">Projects</a>
+            <a href="contact.html" data-i18n="nav_contact">Contact</a>
+            <div class="lang-selector">
+                <span onclick="setLanguage('en'); if(window.innerWidth <= 768) toggleMenu()" class="lang-btn"
+                    data-lang="en" aria-label="Switch to English" role="button" tabindex="0">EN</span>
+                <span onclick="setLanguage('fr'); if(window.innerWidth <= 768) toggleMenu()" class="lang-btn"
+                    data-lang="fr" aria-label="Switch to French" role="button" tabindex="0">FR</span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header class="reveal">
+            <div class="profile-badge">wen7090dev</div>
+            <h1>wen7090dev</h1>
+            <p class="tagline" data-i18n="tagline">I build lightweight, high-performance automation extensions that save
+                you hours of manual
+                work.</p>
+        </header>
+
+        <div class="grid reveal">
+            <!-- SWIFT PURGE -->
+            <div class="card">
+                <div class="stats-badge"
+                    style="background: rgba(254, 44, 85, 0.1); border-color: rgba(254, 44, 85, 0.2); color: var(--primary);">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path
+                            d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                    </svg>
+                    <span data-i18n="new_release">NEW RELEASE</span>
+                    <span style="opacity: 0.5; margin-left: 5px; font-size: 10px;"
+                        data-i18n="extension_version">1.0.0</span>
+                </div>
+                <div class="card-icon" style="background: none;">
+                    <img src="swiftpurge.svg" alt="SwiftPurge Logo"
+                        style="width: 48px; height: 48px; filter: drop-shadow(0 0 10px rgba(238, 29, 82, 0.3));">
+                </div>
+                <h2>SwiftPurge</h2>
+                <div class="tech-stack">
+                    <span class="tech-badge">Javascript</span>
+                    <span class="tech-badge">WebExtensions API</span>
+                    <span class="tech-badge">DOM Manipulation</span>
+                </div>
+                <p data-i18n="swiftpurge_desc">The ultimate privacy tool for TikTok. Automatically clean your likes,
+                    reposts, and favorites with
+                    smart human-mimicking algorithms.</p>
+                <div style="display: flex; gap: 15px; margin-bottom: 20px;">
+                    <a href="privacy-policy/swiftpurge.html" data-i18n="view_privacy"
+                        style="color: var(--primary); text-decoration: none; font-size: 0.8rem; font-weight: 600;">View
+                        Privacy Policy</a>
+                    <a href="license/swiftpurge.html" data-i18n="view_license"
+                        style="color: var(--primary); text-decoration: none; font-size: 0.8rem; font-weight: 600;">View
+                        License</a>
+                </div>
+
+                <div class="dropdown" onclick="this.classList.toggle('active')">
+                    <div class="dropdown-trigger">
+                        <span data-i18n="get_swiftpurge">Get SwiftPurge</span>
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 8px;">
+                            <path d="m6 9 6 6 6-6" />
+                        </svg>
+                    </div>
+                    <div class="dropdown-content" id="browser-links">
+                        <a href="https://chromewebstore.google.com/detail/swiftpurge-tiktok-repost/dbdapoekdehhgaabhpnefhldmcniaicf"
+                            target="_blank" style="display: flex; align-items: center;" data-browser="chrome">
+                            <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png"
+                                class="browser-icon" alt="Chrome Logo" width="20" height="20">
+                            Chrome
+                        </a>
+                        <a href="https://addons.mozilla.org/fr/firefox/addon/swiftpurge-tiktok-cleaner/" target="_blank"
+                            style="display: flex; align-items: center;" data-browser="firefox">
+                            <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png"
+                                class="browser-icon" alt="Firefox Logo" width="20" height="20">
+                            Firefox
+                        </a>
+                        <a href="https://chromewebstore.google.com/detail/swiftpurge-tiktok-repost/dbdapoekdehhgaabhpnefhldmcniaicf"
+                            target="_blank" style="display: flex; align-items: center;" data-browser="edge">
+                            <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png"
+                                class="browser-icon" alt="Edge Logo" width="20" height="20">
+                            Edge (coming)
+                        </a>
+                        <a href="https://chromewebstore.google.com/detail/swiftpurge-tiktok-repost/dbdapoekdehhgaabhpnefhldmcniaicf"
+                            target="_blank" style="display: flex; align-items: center;" data-browser="brave">
+                            <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/brave/brave_48x48.png"
+                                class="browser-icon" alt="Brave Logo" width="20" height="20">
+                            Brave
+                        </a>
+                        <a href="https://chromewebstore.google.com/detail/swiftpurge-tiktok-repost/dbdapoekdehhgaabhpnefhldmcniaicf"
+                            target="_blank" style="display: flex; align-items: center;" data-browser="arc">
+                            <img src="https://icons.duckduckgo.com/ip3/arc.net.ico" class="browser-icon" alt="Arc Logo"
+                                width="20" height="20">
+                            Arc
+                        </a>
+                        <a href="https://chromewebstore.google.com/detail/swiftpurge-tiktok-repost/dbdapoekdehhgaabhpnefhldmcniaicf"
+                            target="_blank" style="display: flex; align-items: center;" data-browser="vivaldi">
+                            <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/vivaldi/vivaldi_48x48.png"
+                                class="browser-icon" alt="Vivaldi Logo" width="20" height="20">
+                            Vivaldi
+                        </a>
+                        <a href="https://addons.opera.com/extensions" target="_blank"
+                            style="display: flex; align-items: center;" data-browser="opera">
+                            <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/opera/opera_48x48.png"
+                                class="browser-icon" alt="Opera Logo" width="20" height="20">
+                            Opera (Coming)
+                        </a>
+                    </div>
+                </div>
+                <p style="font-size: 10px; color: #888; margin-top: 15px; text-align: center; font-style: italic;">
+                    Not affiliated with TikTok.
+                </p>
+            </div>
+
+            <!-- DISCORD RPC MANAGER -->
+            <div class="card">
+                <div class="stats-badge"
+                    style="background: rgba(88,101,242,0.1); border-color: rgba(88,101,242,0.2); color: #5865F2;">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path
+                            d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                    </svg>
+                    <span data-i18n="new_release">NEW RELEASE</span>
+                    <span style="opacity: 0.5; margin-left: 5px; font-size: 10px;"
+                        data-i18n="drpc_version">1.0.0</span>
+                </div>
+
+                <div class="card-icon" style="background: none;">
+                    <img src="https://raw.githubusercontent.com/wen7090dev/discord-rpc-manager/main/public/logo.png"
+                        alt="Discord RPC Manager Logo"
+                        style="width: 48px; height: 48px; filter: drop-shadow(0 0 10px rgba(88,101,242,0.4));">
+                </div>
+
+                <h2>Discord RPC Manager</h2>
+
+                <div class="tech-stack">
+                    <span class="tech-badge">Electron</span>
+                    <span class="tech-badge">React</span>
+                    <span class="tech-badge">Vite</span>
+                    <span class="tech-badge">Tailwind CSS</span>
+                    <span class="tech-badge">discord-rpc</span>
+                </div>
+
+                <p data-i18n="drpc_desc">A powerful desktop application to fully customize your Discord Rich Presence.
+                    Create profiles, set timers, auto-detect media from Spotify, Steam, and more.</p>
+
+                <div style="display: flex; gap: 15px; margin-bottom: 20px;">
+                    <a href="privacy-policy/discord-rpc-manager.html" data-i18n="view_privacy"
+                        style="color: #5865F2; text-decoration: none; font-size: 0.8rem; font-weight: 600;">View
+                        Privacy Policy</a>
+                    <a href="license/discord-rpc-manager.html" data-i18n="view_license"
+                        style="color: #5865F2; text-decoration: none; font-size: 0.8rem; font-weight: 600;">View
+                        License</a>
+                </div>
+
+                <div class="dropdown" onclick="this.classList.toggle('active')">
+                    <div class="dropdown-trigger"
+                        style="background: #5865F2; box-shadow: 0 8px 20px rgba(88,101,242,0.3);">
+                        <span data-i18n="get_drpc">Get Discord RPC Manager</span>
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 8px;">
+                            <path d="m6 9 6 6 6-6" />
+                        </svg>
+                    </div>
+                    <div class="dropdown-content" id="drpc-platform-links">
+                        <a href="https://github.com/wen7090dev/discord-rpc-manager/releases/latest/download/Discord-RPC-Manager-Setup.exe"
+                            target="_blank" style="display: flex; align-items: center;" data-platform="windows">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="#00adef"
+                                style="flex-shrink:0;margin-right:10px;">
+                                <path
+                                    d="M3 5.6L10.5 4.5V12H3V5.6z M11.5 4.36L21 3v9h-9.5V4.36z M3 13h7.5v7.5L3 19.4V13z M11.5 13H21v8.64l-9.5-1.14V13z" />
+                            </svg>
+                            Windows (.exe)
+                        </a>
+                        <a href="https://github.com/wen7090dev/discord-rpc-manager/releases/latest/download/Discord-RPC-Manager-Portable.exe"
+                            target="_blank" style="display: flex; align-items: center;"
+                            data-platform="windows-portable">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="#00adef"
+                                style="flex-shrink:0;margin-right:10px;">
+                                <path
+                                    d="M3 5.6L10.5 4.5V12H3V5.6z M11.5 4.36L21 3v9h-9.5V4.36z M3 13h7.5v7.5L3 19.4V13z M11.5 13H21v8.64l-9.5-1.14V13z" />
+                            </svg>
+                            Windows (Portable)
+                        </a>
+                        <a href="https://github.com/wen7090dev/discord-rpc-manager/releases/latest/download/Discord-RPC-Manager-mac-x64.dmg"
+                            target="_blank" style="display: flex; align-items: center;" data-platform="macos">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="#aaa"
+                                style="flex-shrink:0;margin-right:10px;">
+                                <path
+                                    d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
+                            </svg>
+                            macOS Intel (DMG)
+                        </a>
+                        <a href="https://github.com/wen7090dev/discord-rpc-manager/releases/latest/download/Discord-RPC-Manager-mac-arm64.dmg"
+                            target="_blank" style="display: flex; align-items: center;" data-platform="macos">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="#aaa"
+                                style="flex-shrink:0;margin-right:10px;">
+                                <path
+                                    d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
+                            </svg>
+                            macOS Apple Silicon (DMG)
+                        </a>
+                        <a href="https://github.com/wen7090dev/discord-rpc-manager/releases/latest/download/Discord-RPC-Manager-linux.AppImage"
+                            target="_blank" style="display: flex; align-items: center;" data-platform="linux">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#aaa" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                style="flex-shrink:0;margin-right:10px;">
+                                <polyline points="4 17 10 11 4 5" />
+                                <line x1="12" y1="19" x2="20" y2="19" />
+                            </svg>
+                            Linux (AppImage)
+                        </a>
+                        <a href="https://github.com/wen7090dev/discord-rpc-manager/releases/latest/download/Discord-RPC-Manager-linux.deb"
+                            target="_blank" style="display: flex; align-items: center;" data-platform="linux-deb">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#aaa" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                style="flex-shrink:0;margin-right:10px;">
+                                <polyline points="4 17 10 11 4 5" />
+                                <line x1="12" y1="19" x2="20" y2="19" />
+                            </svg>
+                            Linux (.deb)
+                        </a>
+                        <hr style="border: none; border-top: 1px solid rgba(255,255,255,0.07); margin: 4px 0;">
+                        <a href="https://github.com/wen7090dev/discord-rpc-manager" target="_blank"
+                            style="display: flex; align-items: center;" data-i18n-parent>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"
+                                style="flex-shrink:0;margin-right:10px;color:#aaa;">
+                                <path
+                                    d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z" />
+                            </svg>
+                            <span data-i18n="view_source">Source Code</span>
+                        </a>
+                    </div>
+                </div>
+
+                <p style="font-size: 10px; color: #888; margin-top: 15px; text-align: center; font-style: italic;"
+                    data-i18n="drpc_disclaimer">Not affiliated with Discord Inc.</p>
+            </div>
+
+        </div>
+
+        <div class="support-cta reveal">
+            <h2 data-i18n="support_title">Support my work</h2>
+            <p data-i18n="support_desc">I focus on creating free or affordable tools for everyone. If any of my projects
+                saved you time or made
+                your life easier, consider fueling the next one with a coffee!</p>
+            <a href="https://www.buymeacoffee.com/wen7090" target="_blank" class="btn btn-support"
+                aria-label="Buy me a coffee"
+                style="padding: 0; border: none; background: transparent; display: inline-block; transition: all 0.3s ease;">
+                <img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=wen7090&button_colour=FFDD00&font_colour=000000&font_family=Inter&outline_colour=000000&coffee_colour=ffffff"
+                    alt="Buy Me a Coffee" width="235" height="50"
+                    style="display: block; border-radius: 14px; box-shadow: 0 8px 25px rgba(0,0,0,0.2); transform: scale(1);">
+            </a>
+        </div>
+
+        <footer>
+            <p>&copy; <span id="year"></span> wen7090dev • <span data-i18n="footer_text">All tools built with precision and care.</span>
+            </p>
+            <p style="font-size: 0.75rem; margin-top: 10px; color: #999;">
+                <span data-i18n="site_privacy_notice">No cookies • No data collection • 100% Privacy</span>
+                <br>
+                <span data-i18n="site_legal">Legal Notice</span>: Hosted by GitHub Inc.
+            </p>
+        </footer>
+    </div>
+    <script>
+        function toggleMenu() {
+            document.getElementById('mobileMenu').classList.toggle('active');
+            document.querySelector('.menu-btn').classList.toggle('active');
+        }
+
+        // Browser Detection
+        function detectBrowser() {
+            const ua = navigator.userAgent;
+            let detected = null;
+
+            if (ua.indexOf("Firefox") > -1) detected = "firefox";
+            else if (ua.indexOf("Edg") > -1) detected = "edge";
+            else if (ua.indexOf("OPR") > -1 || ua.indexOf("Opera") > -1) detected = "opera";
+            else if (ua.indexOf("Vivaldi") > -1) detected = "vivaldi";
+            else if (ua.indexOf("Arc") > -1) detected = "arc";
+            else if (ua.indexOf("Brave") > -1 || (navigator.brave && navigator.brave.isBrave())) detected = "brave";
+            else if (ua.indexOf("Chrome") > -1) detected = "chrome";
+
+            if (detected) {
+                const link = document.querySelector(`[data-browser="${detected}"]`);
+                if (link) {
+                    link.classList.add('is-current');
+                    const badge = document.createElement('span');
+                    badge.className = 'browser-current-badge';
+                    badge.setAttribute('data-i18n', 'current_browser');
+                    badge.innerText = 'Current';
+                    link.appendChild(badge);
+
+                    // Move current browser to top
+                    const parent = document.getElementById('browser-links');
+                    parent.prepend(link);
+                }
+            }
+        }
+
+        // Scroll Reveal logic
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js').then(registration => {
+                    console.log('SW registered: ', registration);
+                }).catch(registrationError => {
+                    console.log('SW registration failed: ', registrationError);
+                });
+            });
+        }
+
+        function detectPlatform() {
+            const ua = navigator.userAgent;
+            let platform = null;
+            if (ua.indexOf('Win') > -1) platform = 'windows';
+            else if (ua.indexOf('Mac') > -1) platform = 'macos';
+            else if (ua.indexOf('Linux') > -1) platform = 'linux';
+
+            if (platform) {
+                const link = document.querySelector(`[data-platform="${platform}"]`);
+                if (link) {
+                    link.classList.add('is-current');
+                    const badge = document.createElement('span');
+                    badge.className = 'browser-current-badge';
+                    badge.setAttribute('data-i18n', 'current_browser');
+                    badge.innerText = 'Current';
+                    link.appendChild(badge);
+                    const parent = document.getElementById('drpc-platform-links');
+                    parent.prepend(link);
+                }
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            detectBrowser();
+            detectPlatform();
+            document.getElementById('year').textContent = new Date().getFullYear();
+        });
+    </script>
+</body>
+
+</html>

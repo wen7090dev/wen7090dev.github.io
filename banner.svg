@@ -1,0 +1,64 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <!-- Glow Gradients -->
+        <radialGradient id="glow-red" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+            <stop offset="0%" stop-color="#fe2c55" stop-opacity="0.2"/>
+            <stop offset="100%" stop-color="#0a0a0c" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="glow-blue" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+            <stop offset="0%" stop-color="#00d4ff" stop-opacity="0.15"/>
+            <stop offset="100%" stop-color="#0a0a0c" stop-opacity="0"/>
+        </radialGradient>
+        <filter id="shadow">
+            <feDropShadow dx="0" dy="2" stdDeviation="5" flood-color="black" flood-opacity="0.5"/>
+        </filter>
+        <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+             <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.03"/>
+        </pattern>
+    </defs>
+
+    <!-- Background -->
+    <rect width="1200" height="630" fill="#0a0a0c"/>
+    <rect width="1200" height="630" fill="url(#grid)"/>
+    
+    <!-- Watermark Logo (Drawn directly, no <use>) -->
+    <!-- M55 10 L25 55 H45 L35 90 L75 35 H55 Z -->
+    <!-- Scaled x6 (Width ~300) Centered at 600, 315 -->
+    <!-- Center of path 50,50. T=300,15 => x=300+300=600. y=15+300=315. Correct. -->
+    <path d="M55 10 L25 55 H45 L35 90 L75 35 H55 Z" 
+          transform="translate(300 15) scale(6) rotate(-10 50 50)" 
+          fill="#ffffff" opacity="0.02"/>
+
+    <!-- Dual Glow Effect -->
+    <rect x="-100" y="-100" width="700" height="700" fill="url(#glow-red)" opacity="0.8"/>
+    <rect x="600" y="200" width="700" height="700" fill="url(#glow-blue)" opacity="0.8"/>
+    
+    <!-- Logo Icon (Left Side) - ABSOLUTE COORDINATES -->
+    <!-- No groupings or transforms that can fail in PNG conversion -->
+    <!-- Logo centered at x=280, y=315, width=65, height=105 approx (Scale 1.3) -->
+    <!-- M 55 10 -> x=291, y=263 -->
+    <path d="M291.5 263 
+             L252.5 321.5 
+             H278.5 
+             L265.5 367 
+             L317.5 295.5 
+             H291.5 Z" 
+          fill="#fe2c55" filter="url(#shadow)"/>
+    
+    <!-- Vertical Divider -->
+    <rect x="360" y="240" width="2" height="150" fill="#333" rx="1"/>
+
+    <!-- Text Group (Right Side) -->
+    <g transform="translate(400, 0)"> 
+        <text x="0" y="320" font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="800" font-size="90" fill="#ffffff" style="text-shadow: 0 0 20px rgba(0,0,0,0.5);">wen7090dev</text>
+        <text x="5" y="370" font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="400" font-size="24" fill="#fe2c55" letter-spacing="3" opacity="0.9">DIGITAL ARCHITECT &amp; CREATIVE DEVELOPER</text>
+    </g>
+    
+    <!-- Floating Particles -->
+    <circle cx="100" cy="100" r="2" fill="#fe2c55" opacity="0.4"/>
+    <circle cx="1100" cy="530" r="3" fill="#00d4ff" opacity="0.4"/>
+    <circle cx="1050" cy="120" r="2" fill="#ffffff" opacity="0.2"/>
+    <circle cx="150" cy="500" r="2" fill="#00d4ff" opacity="0.3"/>
+    <circle cx="900" cy="50" r="1.5" fill="#fe2c55" opacity="0.3"/>
+    <circle cx="300" cy="580" r="2" fill="#ffffff" opacity="0.2"/>
+</svg>

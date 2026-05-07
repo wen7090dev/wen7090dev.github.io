@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>RPC Manager - Import</title>
+    <style>
+        body { font-family: sans-serif; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; background: #2c2f33; color: white; }
+        .btn { padding: 15px 30px; background: #5865F2; color: white; text-decoration: none; border-radius: 5px; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h1>Importation vers RPC Manager...</h1>
+    <p>Si l'application ne s'ouvre pas, cliquez sur le bouton ci-dessous :</p>
+    <a id="link" class="btn">Ouvrir l'application</a>
+
+    <script>
+        // On récupère le code dans l'URL (ex: ?c=LE_CODE)
+        const params = new URLSearchParams(window.location.search);
+        const code = params.get('c');
+        
+        if (code) {
+            // S'assure que le préfixe rpc: est présent pour l'app
+            const cleanCode = (code.startsWith('rpc:') || code.startsWith('r:')) ? code : 'rpc:' + code;
+            const deepLink = "rpcmanager://import/" + cleanCode;
+            document.getElementById('link').href = deepLink;
+            // On tente d'ouvrir l'app automatiquement
+            window.location.href = deepLink;
+        } else {
+            document.body.innerHTML = "<h1>Erreur : Aucun code trouvé.</h1>";
+        }
+    </script>
+</body>
+</html>

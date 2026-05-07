@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Sitemap Link
+Sitemap: https://wen7090dev.github.io/sitemap.xml

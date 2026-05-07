@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#fe2c55">
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://raw.githubusercontent.com https://img.buymeacoffee.com https://www.google.com https://thebrowser.company https://icons.duckduckgo.com; connect-src 'self';">
+    <title>Contact | wen7090dev</title>
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Get in touch with wen7090dev for collaboration, support, or inquiries regarding SwiftPurge and other automation tools.">
+    <meta name="keywords"
+        content="contact wen7090dev, swiftpurge support, browser extension developer, TikTok automation support">
+    <!-- Social Media Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://wen7090dev.github.io/contact.html">
+    <meta property="og:title" content="Contact | wen7090dev">
+    <meta property="og:description" content="Reach out for collaboration or support regarding automation tools.">
+    <meta property="og:image" content="https://wen7090dev.github.io/banner.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Contact | wen7090dev">
+    <meta name="twitter:description" content="Reach out for collaboration or support.">
+    <meta name="twitter:image" content="https://wen7090dev.github.io/banner.png">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" sizes="any">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <script src="i18n.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="noise"></div>
+    <div class="bg-glow"></div>
+    <nav class="main-nav">
+        <div class="menu-btn" onclick="toggleMenu()" aria-label="Menu" role="button" tabindex="0">
+            <div class="hamburger"></div>
+        </div>
+        <div class="nav-container-new" id="mobileMenu">
+            <a href="index.html" data-i18n="nav_projects">Projects</a>
+            <a href="contact.html" data-i18n="nav_contact" class="active">Contact</a>
+            <div class="lang-selector">
+                <span onclick="setLanguage('en'); if(window.innerWidth <= 768) toggleMenu()" class="lang-btn"
+                    data-lang="en" aria-label="Switch to English" role="button" tabindex="0">EN</span>
+                <span onclick="setLanguage('fr'); if(window.innerWidth <= 768) toggleMenu()" class="lang-btn"
+                    data-lang="fr" aria-label="Switch to French" role="button" tabindex="0">FR</span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header class="reveal">
+            <div class="profile-badge">wen7090dev</div>
+            <h1 data-i18n="contact_title">Get in Touch</h1>
+            <p class="contact-subtitle" data-i18n="contact_subtitle">No complicated forms. Contact me directly on your
+                favorite platform.</p>
+        </header>
+
+        <div class="contact-grid-modern reveal">
+            <!-- EMAIL CARD -->
+            <div class="contact-card">
+                <div class="card-icon-big">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                        <polyline points="22,6 12,13 2,6" />
+                    </svg>
+                </div>
+                <h3 data-i18n="form_email">Email</h3>
+                <span>wen7090dev@gmail.com</span>
+                <div style="display: flex; gap: 10px;">
+                    <a href="mailto:wen7090dev@gmail.com" class="copy-email-btn">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                            <polyline points="15 3 21 3 21 9" />
+                            <line x1="10" y1="14" x2="21" y2="3" />
+                        </svg>
+                        <span data-i18n="contact_write">Write</span>
+                    </a>
+                    <button onclick="copyEmail()" class="copy-email-btn">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2" />
+                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+                        </svg>
+                        <span data-i18n="contact_copy">Copy</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- GITHUB CARD -->
+            <a href="https://github.com/wen7090dev" target="_blank" class="contact-card">
+                <div class="card-icon-big">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path
+                            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+                    </svg>
+                </div>
+                <h3 data-i18n="contact_github">GitHub</h3>
+                <span>github.com/wen7090dev</span>
+                <div class="copy-email-btn" data-i18n="contact_visit">
+                    Visit Profile
+                </div>
+            </a>
+
+            <!-- DISCORD / SUPPORT CARD -->
+            <a href="https://www.buymeacoffee.com/wen7090" target="_blank" class="contact-card support-card-fix" aria-label="Support me on Buy Me a Coffee">
+                <div class="card-icon-big" style="background: rgba(255, 221, 0, 0.1); color: #FFDD00;">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M18 8h1a4 4 0 0 1 0 8h-1" />
+                        <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z" />
+                        <line x1="6" y1="1" x2="6" y2="4" />
+                        <line x1="10" y1="1" x2="10" y2="4" />
+                        <line x1="14" y1="1" x2="14" y2="4" />
+                    </svg>
+                </div>
+                <h3 data-i18n="contact_support">Support</h3>
+                <span data-i18n="contact_coffee">Buy me a coffee</span>
+                <div class="copy-email-btn" data-i18n="contact_fuel">
+                    Fuel the work
+                </div>
+            </a>
+        </div>
+
+        <footer>
+            <p>&copy; <span id="year"></span> wen7090dev • <span data-i18n="footer_text">All tools built with precision and care.</span>
+            </p>
+            <p style="font-size: 0.75rem; margin-top: 10px; color: #999;">
+                <span data-i18n="site_privacy_notice">No cookies • No data collection • 100% Privacy</span>
+                <br>
+                <span data-i18n="site_legal">Legal Notice</span>: Hosted by GitHub Inc.
+            </p>
+        </footer>
+    </div>
+
+    <div id="toast">Email Copied!</div>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById('mobileMenu').classList.toggle('active');
+            document.querySelector('.menu-btn').classList.toggle('active');
+        }
+
+        async function copyEmail() {
+            const email = "wen7090dev@gmail.com";
+            const lang = localStorage.getItem('portfolio_lang') || 'en';
+            const strings = PORTFOLIO_TRANSLATIONS[lang];
+            try {
+                await navigator.clipboard.writeText(email);
+                showToast(strings.contact_copied);
+            } catch (err) {
+                console.error('Failed to copy: ', err);
+            }
+        }
+
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            toast.innerText = message;
+            toast.classList.add('show');
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 3000);
+        }
+
+        // Scroll Reveal logic
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+        
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js').then(registration => {
+                    console.log('SW registered: ', registration);
+                }).catch(registrationError => {
+                    console.log('SW registration failed: ', registrationError);
+                });
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+             document.getElementById('year').textContent = new Date().getFullYear();
+        });
+    </script>
+</body>
+
+</html>
